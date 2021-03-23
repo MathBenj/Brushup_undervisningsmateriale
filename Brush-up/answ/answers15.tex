@@ -1,0 +1,117 @@
+\newpage 
+\section{Differentiabilitet 3}
+\begin{enumerate}
+			
+	\item Svarene er:
+	\begin{align*}
+	f'(x)=\frac{x}{\sqrt{x^2+1}},&&f'(x)=3(3x^2+2x+1)^2(6x+2),&&f'(x)=32x+16.
+	\end{align*}
+	
+	\item Svarene er:
+	\begin{align*}
+	f'(x)=2xe^{x^2},&& g'(x)=-\frac{1}{x(\ln x)^2}+2x(1+\tan^2(x^2)),&&h'(x)=\frac{x+1}{\sqrt{x^2+2x-1}}
+	\end{align*}
+	
+	\item Vi ved allerede at
+	\begin{align*}
+	\frac{d}{dx} \tan x=1+\tan^2 x.
+	\end{align*}
+	Differentierer vi vha. kædereglen får vi
+	\begin{align*}
+	\frac{d^2}{dx^2}\tan x=2\tan(x)(1+\tan^2 x)=2\tan x+2\tan^3x.
+	\end{align*}
+	
+	\item Svarene er: $f'(x)=\tan x$ og $g'(x)=\frac{1}{\tan x}$.
+	
+	\item Hvis man er skarp kan man se at
+	\begin{align*}
+	f(t)=\sqrt{e^{4t}+e^{-4t}-2}=\sqrt{(e^{2t}-e^{-2t})^2}=e^{2t}-e^{-2t},
+	\end{align*}
+	hvilket let giver at $f'(t)=2(e^{2t}+e^{-2t})$. Indser man ikke dette vil man få
+	\begin{align*}
+	f'(t)=\frac{2(e^{4t}-e^{-4t})}{\sqrt{e^{4t}+e^{-4t}-2}}.
+	\end{align*}
+	Vil man gerne reducere dette kan vi bruge nogle kvadratsætninger til at få
+	\begin{align*}
+	f'(t)=\frac{2(e^{4t}-e^{-4t})}{\sqrt{e^{4t}+e^{-4t}-2}}=\frac{2(e^{2t}-e^{-2t})(e^{2t}+e^{-2t})}{(e^{2t}-e^{-2t})}=2(e^{2t}+e^{-2t}).
+	\end{align*}
+	
+	\item Ved at anvende kædereglen samt formlen $\sin(2x)=2\cos(x)\sin(x)$ (se Opgave~\ref{it:trig2}) får vi
+	\begin{align*}
+	\frac{d}{dx}\cos^2x=2\cos(x)(-\sin(x))=-\sin(2x).
+	\end{align*}
+	Gør vi det samme med $\sin^2x$ får vi
+	\begin{align*}
+	\frac{d}{dx}\sin^2x=2\sin(x)\cos(x)=\sin(2x).
+	\end{align*}
+	
+	\item For at simplificere vores udregninger reducerer vi først brøken. Ved at anvende $\tan x=\frac{\sin x}{\cos x}$ får vi at
+	\begin{align*}
+	f(x)=\frac{\sin^2(x)\cos(x)}{\frac{\sin x}{\cos x}}=\sin(x)\cos^2(x).
+	\end{align*}
+	Ved at differentiere får vi så
+	\begin{align*}
+	f'(x)=\cos^3x+\sin(x)(2\cos(x)(-\sin(x)))=\cos^3(x)-2\sin^2(x)\cos(x).
+	\end{align*}
+	
+	\item Svarene er:
+	\begin{align*}
+	f'(x)=\frac{1}{x+3},&& f'(x)=(2x+2)e^{2x+x^2},&& f'(x)=\cos(x-1),&&f'(x)=\frac{1}{2x\sqrt{\ln(x)}}.
+	\end{align*}
+	
+
+	
+	\item Svarene er:
+	\begin{align*}
+	f'(x)&=\frac{12\ln((2x^4-3x^2)^3)(4x^3-3x)}{2x^4-3x^2},\\
+	g'(x)&=-5(x-1)^4\sin(2(x-1)^5),\\
+	h'(x)&=-2x\sin(x^2)e^{\cos(x^2)}.
+	\end{align*}
+	
+	\item \label{it:diff31} Hvis vi bruger hintet får vi at
+	\begin{align*}
+	\frac{d}{dx} a^x= e^{x\ln a} \ln a=a^x\ln a.
+	\end{align*}
+
+	\item Hvis vi bruger hintet samt den forrige opgave får vi at
+	\begin{align*}
+	1=a^{\log_a(x)}\ln(a) \frac{d}{dx}\log_a(x),
+	\end{align*}
+	og isolerer vi for $\frac{d}{dx} \log_a(x)$ får vi at
+	\begin{align*}
+	\frac{d}{dx} \log_a(x)=\frac{1}{x\ln a}.
+	\end{align*}
+	
+	\item Vi har at
+	\begin{align*}
+	f'(x)=\frac{1}{x\ln(x)}
+	\end{align*}
+	
+	\item Bruger vi hintet får vi at
+	\begin{align*}
+	\frac{d}{dx}\frac{f(x)}{g(x)}=\frac{d}{dx}f(x)(g(x))^{-1}=f'(x)g^{-1}(x)-f(x)g^{-2}(x)g'(x)=\frac{f'(x)g(x)-f(x)g'(x)}{g^2(x)}
+	\end{align*}
+	
+	
+	\item\label{it:diff32} Ved at differentiere får vi
+	\begin{align*}
+	\frac{d}{dx}\Big( x(\ln(x))^2 -2x\ln(x)+2x\Big)	&=(\ln(x))^2+\frac{2x\ln(x)}{x}-2\ln(x)-\frac{2x}{x}+2\\
+	&=(\ln(x))^2+2\ln(x)-2\ln(x)-2+2=(\ln(x))^2.
+	\end{align*}
+	
+	
+	
+	\item Fra Opgave~\ref{it:eks2} har vi at
+	\begin{align*}
+	\log_a(x)=\frac{\ln(x)}{\ln(a)},
+	\end{align*}
+	så ved at differentiere ser vi at
+	\begin{align*}
+	\frac{d}{dx} \log_a(x)=\frac{1}{x\ln(a)}.
+	\end{align*}
+	
+	\item Lad $k(x)=(g\circ h)(x)$. Så er $k'(x)=g'(h(x))h'(x)$ og bruger vi kædereglen får vi at
+	\begin{align*}
+	(f\circ g \circ h)'(x)=(f\circ k)'(x)=f'(k(x))k'(x)=f'(g(h(x)))g'(h(x))h'(x).
+	\end{align*}
+\end{enumerate}

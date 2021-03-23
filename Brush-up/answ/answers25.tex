@@ -1,0 +1,96 @@
+\section{Differentialligninger 3}
+\begin{enumerate}
+	
+	\item Svarene er:
+	\begin{align*}
+	y(x)=ce^{2x},&& y(x)=ce^{-\sqrt{2}x} ,&& y(x)=ce^{\pi x}.
+	\end{align*}
+	
+	
+	\item Svarene er:
+	\begin{align*}
+	y(x)=-e^{-6x},&& y(x)=-e^{-\frac{2}{3}x}.
+	\end{align*}
+
+	
+
+	
+	
+	
+	\item \label{it:diffeq31ans} Løsningen er $A(t)=3e^{-4t}$. Halveringstiden er $\frac{\ln(2)}{4}$.
+
+	
+	\item \label{it:diffeq12ans} Lad $p(x)$ være en funktion med stamfunktion $P(x)$. Brug samme metode som i Opgave~\ref{it:diffeq11} til at finde den fuldstændige løsning til
+	\begin{align*}
+	y'+p(x)y=0.
+	\end{align*}
+	Omskriver vi differentialligningen fås
+	\begin{align*}
+	y'+p(x)y=0\quad \Leftrightarrow\quad y'=-p(x)y\quad\Leftrightarrow\quad \frac{y'}{y}=-p(x)\quad\Leftrightarrow\quad \frac{d}{dx}\ln(y) =-p(x).
+	\end{align*}
+	Integrerer vi begge sider og isolerer for $y$ fås
+	\begin{align*}
+	\ln(y)=-P(x)+c\quad \Leftrightarrow\quad y=e^c e^{-P(x)}=Ce^{-P(x)}
+	\end{align*}
+	hvor $C=e^c$.
+	
+	\item Ved at reducere fås
+	\begin{align*}
+	y'=(x-2)y,
+	\end{align*}
+	hvilket har løsningen
+	\begin{align*}
+	y(x)=ce^{\frac{1}{2}x^2-2x}.
+	\end{align*}
+
+
+	\item Løsningen er $y(x)=ce^{\ln(x)}=cx$.
+
+	\item Løsningen er $y(x)=ce^{x\ln(x)-x}$.
+
+	
+	\item Svarene er:
+	\begin{align*}
+	y(x)=ce^{-x^3},&& y(x)=ce^{-x^2},&& y(x)=\frac{c}{x}.
+	\end{align*}
+
+	\item Vi har at 
+	\begin{align*}
+	y_1'(x)=20(e^x+25e^{5x}),\quad \textup{og} \quad y_2'(x)=10(-6e^x+50e^{5x}).
+	\end{align*}
+	Yderligere gælder at
+	\begin{align*}
+	4y_1(x)+y_2(x)&=20e^x+500e^{5x},\\
+	3y_1(x)+2y_2(x)&=-60e^x+500e^{5x},
+	\end{align*}
+	hvilket viser at $y_1$ og $y_2$ løser differentialligningerne. Derudover ses det nemt at $y_1(0)=120$ og $y_2(0)=40$.
+	
+	\item Svarene er:
+	
+	\begin{enumerate}
+		\item Substituerer vi $u=y'$ får vi ligningen
+		\begin{align*}
+		u'+\frac{k}{x}u=0,
+		\end{align*}
+		som har løsningen
+		\begin{align*}
+		u=ce^{-k\ln(x)}=\frac{c}{x^k}.
+		\end{align*}
+		Substituerer vi tilbage får vi at
+		\begin{align}\label{eq:diffeq1ans}
+		y'(x)=\frac{c}{x^k}.
+		\end{align}
+
+		\item Ved at integrere begge sider får vi
+		\begin{align*}
+		y(x)=\begin{cases}
+		c\ln(x)+C,&\textup{når } k=1\\
+		\frac{c}{-k+1}x^{-k+1}+C,&\textup{når } k\neq 1.
+		\end{cases}
+		\end{align*}
+		\item Svaret er $ y(x)= 2\ln(x)+1 $.
+		
+	\end{enumerate}
+	
+	
+\end{enumerate}

@@ -1,0 +1,50 @@
+%%%
+%%% Macros
+%%%
+%%
+%% Theorem-like environments 
+%%
+%
+% The theorem style follows the recommendations of AMS (see amsthm documentation page 7)
+%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+%
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+%
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+%%
+%% Notation
+%%
+%
+% Spaces
+%
+\newcommand{\Cinf}{C^\infty}
+\newcommand{\No}{\mathbf{N}_0}
+\newcommand{\N}{\mathbf{N}}	
+\newcommand{\Z}{\mathbf{Z}}
+\newcommand{\R}{\mathbf{R}}
+\newcommand{\C}{\mathbf{C}}
+\newcommand{\SR}{\mathscr{S}(\R^d)}
+\newcommand{\SpR}{\mathscr{S}'(\R^d)}
+\newcommand{\sH}{\mathscr{H}}
+%
+% Functions/Operators
+% 
+\newcommand{\abs}[1]{\vert #1\vert}
+\newcommand{\pair}[2]{\langle #1,#2\rangle}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\norm}[1]{\Vert #1\Vert}
+\newcommand{\Op}{\mathrm{Op}}
+\newcommand{\jn}[1]{\langle#1\rangle}
+
+
+\newcommand{\boundellipse}[3]% center, xdim, ydim
+{(#1) ellipse (#2 and #3)
+}

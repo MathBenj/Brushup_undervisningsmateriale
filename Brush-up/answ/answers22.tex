@@ -1,0 +1,127 @@
+\newpage
+\section{Bestemte integraler 2}
+\begin{enumerate}
+	\item Svarene er:
+	\begin{align*}
+	\frac{\sqrt{2}-2}{2},&& 1,&& \frac{1}{24}
+	\end{align*}
+	
+	
+	
+	\item Svarene er:
+	\begin{align*}
+	42,&& \ln(\frac{2+\sqrt{2}}{2}),&&\frac{1}{4}.
+	\end{align*}
+	
+	\item\label{it:bes11ans} Hvis $u=-x$ så er $-du=dx$ hvilket giver at
+	\begin{align*}
+	\int_{-a}^{0}f(x) \dd x=-\int_{a}^{0} f(-u)\dd u=-\int_a^0-f(u) \dd u=\int_{a}^{0}f(u)\dd u=-\int_0^af(u)\dd u.
+	\end{align*}
+	Da $u$ bare er navnet på variablen kunne vi lige så godt kalde den for $x$. Dermed får vi
+	\begin{align*}
+	\int_{-a}^{0}f(x)\dd x=-\int_{0}^{a}f(x)\dd x.
+	\end{align*}
+	Bruger vi Opgave~\ref{it:best2} får vi at
+	\begin{align*}
+	\int_{-a}^{a}f(x)\dd x=\int_{-a}^{0}f(x)\dd x+\int_{0}^{a} f(x)\dd x=-\int_{0}^{a} f(x)\dd x+\int_{0}^{a} f(x)\dd x=0.
+	\end{align*}
+	
+	\item Da alle funktionerne der integreres er ulige og intervallerne der integreres over er symmetriske om $y$-aksen giver alle integralerne $0$.
+	
+	\item Hvis $u=-x$ så er $-du=dx$ hvilket giver
+	\begin{align*}
+	\int_{-a}^{0}f(x)\dd x=-\int_{a}^{0} f(-u)\dd u=-\int_{a}^{0}f(u)\dd u=\int_0^a f(u)\dd u.
+	\end{align*}
+	Da $u$ bare er navnet på variablen kunne vi lige så godt kalde den for $x$. Dermed får vi
+	\begin{align*}
+	\int_{-a}^{0}f(x)\dd x=\int_{0}^{a}f(x)\dd x.
+	\end{align*}
+	Bruger vi Opgave~\ref{it:best2} får vi at
+	\begin{align*}
+	\int_{-a}^{a}f(x)\dd x&=\int_{-a}^{0}f(x)\dd x+\int_{0}^{a} f(x)\dd x\\&=\int_{0}^{a} f(x)\dd x+\int_{0}^{a} f(x)\dd x\\&=2\int_{0}^{a} f(x)\dd x.
+	\end{align*}
+
+	\item Svarene er:
+	\begin{align*}
+	4,&& \frac{1}{24}
+	\end{align*}
+	
+	\item Svarene er:
+	\begin{enumerate}
+		\item $f(-x)=(-x)^{-2}\sin (\frac{1}{-x})=-x^{-2}\sin (\frac{1}{x})=f(x)$.
+		\item $F(x)=\cos(\frac{1}{x})$. 
+		\item I Opgave~\ref{it:bes11} var det en antagelse at funktionen vi betragtede var kontinuert, men $f$ er ikke kontinuert.
+	\end{enumerate} 
+	
+	\item Hvis $u=\sqrt{x}$ så er $2u du=dx$, hvilket giver at
+	\begin{align*}
+	\int_0^1e^{\sqrt{x}}\dd x=2\int_0^1 ue^u\dd u=2[(u-1)e^u]_0^1=2.
+	\end{align*}
+
+	\item Hvis $u=\sqrt{x}$ så er $2u du=dx$, hvilket giver at
+	\begin{align*}
+	\int_0^{\pi^2} \sin\sqrt{x}\dd x =\int_0^\pi u\sin u\dd u=[\sin u-u\cos u]_0^\pi=2\pi.
+	\end{align*}
+	
+	\item\label{it:bes2ans} I denne opgave vil vi beskrive arealet af en cirkel med vilkårlig radius.
+	\begin{enumerate}
+		\item Den øvre halvdel af enhedscirklen kan beskrives med funktionen $y=\sqrt{1-x^2}$. integrerer vi denne funktion fra $0$ til $1$ må vi få en fjerdedel af cirklen areal. Dermed er
+		\begin{align*}
+		4\int_0^1 \sqrt{1-x^2}\dd x=\pi.
+		\end{align*}
+
+		\item Den øvre halvcirkel kan beskrives som funktionen $y=\sqrt{r^2-x^2}$. Integrerer vi dette fra $0$ til $r$ og ganger med $4$ må vi få arealet af hele cirklen. Altså er
+		\begin{align*}
+		A=4\int_0^r \sqrt{r^2-x^2}\dd x=4r\int_0^r \sqrt{1-\frac{x^2}{r^2}}\dd x,
+		\end{align*}
+		og hvis vi substituer $u=\frac{x}{r}$ så er $r du=dx$ og dermed får vi ved at anvende del (a) at
+		\begin{align*}
+		A=4r\int_0^1 r\sqrt{1-u^2}\dd u=r^2\pi.
+		\end{align*}
+	\end{enumerate}
+	\item Svarene er:
+			\begin{enumerate}
+				\item Hvis hvis $a=b$ kan ellipsens ligning omskrives til
+				\begin{align*}
+				\frac{x^2}{a^2}+\frac{y^2}{a^2}=1\quad\Leftrightarrow\quad x^2+y^2=a^2.
+				\end{align*}
+				\item Den øvre halvellipse kan beskrives som funktionen $y=b\sqrt{1-\frac{x^2}{a^2}}$. Integrerer vi dette fra $0$ til $a$ og ganger med $4$ må vi få arealet af hele cirklen. Altså er
+				\begin{align*}
+				A=4\int_0^a b\sqrt{1-\frac{x^2}{a^2}}\dd x,
+				\end{align*}
+				og hvis vi substituer $u=\frac{x}{a}$ så er $a du=dx$ og dermed får vi ved at anvende del (a) i forrige opgave at
+				\begin{align*}
+				A=4b\int_0^1  a\sqrt{1-u^2}\dd u=ab\pi.
+				\end{align*}
+						
+				\item Hvis $a=b$ så har vi vist at ellipsen bliver en cirkel med radius $a=b$, hvorfor formlen $\pi ab$ for ellipser generaliserer formlen $\pi ab$ for ellipser.
+			\end{enumerate}
+
+	\item Svaret er $-2\pi$.
+	
+		\item Svarene er:
+	\begin{align*}
+	\frac{\pi}{2}-1,&&  2\ln(2)-\frac{3}{4},&& \frac{64}{3}\ln(4)-21.
+	\end{align*}
+	
+		\item Arealet er $\pi^2-4$.
+		
+			\item Først omskriver vi $\sin(x)\cos(x)=\frac{1}{2}\sin(2x)$. Ved at integrere får vi at
+		\begin{align*}
+		\frac{1}{2}\int_{0}^{\frac{\pi}{3}} \sin(2x)-\sin(x)\dd x= [\frac{1}{2}\cos(x)-\frac{1}{4}\cos(2x) ]_0^{\frac{\pi}{3}}=\frac{1}{8}. 
+		\end{align*}
+%	\begin{figure}
+%	\centering
+%	\begin{tikzpicture}
+%	\begin{axis}[axis x line=center,xmin=-3.5,xmax=3.5,ymin=-2.5,ymax=2.5,axis y line=center]
+%	\addplot[thick,blue,domain=0:2*pi,samples=300] ({5/2*cos(deg(x))},{3/2*sin(deg(x))});
+%	\node[fill, circle, inner sep=1pt] at (axis cs:0,3/2) [label=above right: {\tiny$(0,b)$}]{};
+%	\node[fill, circle, inner sep=1pt] at (axis cs:0,-3/2) [label=below right: {\tiny$(0,-b)$}]{};
+%	\node[fill, circle, inner sep=1pt] at (axis cs:5/2,0) [label=above right: {\tiny$(a,0)$}]{};
+%	\node[fill, circle, inner sep=1pt] at (axis cs:-5/2,0) [label=above left: {\tiny$(-a,0)$}]{};
+%	\end{axis}
+%	\end{tikzpicture}
+%	\caption{Opgave~\ref{it:bes2}}
+%	\label{fig:bes2}
+%	\end{figure}
+\end{enumerate}

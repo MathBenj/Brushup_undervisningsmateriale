@@ -1,0 +1,65 @@
+\section{Delvis integration for ubestemte integraler}
+\noindent Sidste gang betragtede vi hvordan man bestemmer stamfunktionen til to funktioner lagt sammen eller en konstant gange en funktion. Denne gang vil vi studere, hvordan man kan finde en stamfunktion af to funktioner ganget sammen.
+
+\paragraph*{Regneregel:}
+Hvis $f$ er en differentiabel funktion og $g$ er en kontinuere funktion, så er integralet af deres produkt givet ved
+\begin{enumerate}
+\item $\displaystyle \int f(x)g(x) \d x = f(x)G(x)-\int f'(x)G(x) \d x$.
+\end{enumerate}
+Denne regel kaldes ofte for delvis integration. Bemærk, at hvis man har et produkt af to funktioner ganget sammen, så bliver det ofte meget nemmere hvis man tænker sig lidt om før man vælger hvilken funktion man kalder $f$ og hvilken man kalder $g$.
+
+\paragraph*{Eksempler:}
+\begin{enumerate}
+\item Brug delvis integration en gang til at finde stamfunktionen til $h(x)=x\sin x$, ved først at sætte $g(x)=x$ og $f(x) = \sin x$ og dernæst $f(x)=x$ og $g(x)=\sin x$:
+
+Vi starter med at sætte $g(x)=x$ og $f(x) = \sin x$. Så har vi, at $f'(x)=\cos x$ og $G(x) = \frac{1}{2}x^2$. Ved delvis integration får vi
+\begin{align*}
+\int x \sin x \d x &= \sin (x) \frac{1}{2}x^2 - \int \cos (x)  \frac{1}{2}x^2 \d x\\
+&=\frac{1}{2}x^2 \sin x - \int \frac{1}{2}x^2 \cos x \d x.
+\end{align*}
+Hvis vi i stedet sætter $f(x)=x$ og $g(x)=\sin x$ så har vi, at $f'(x)=1$ og $G(x)=-\cos x$. Indsætter vi dette i regneregel $1.$ får vi
+\begin{align*}
+\int x \sin x \d x &= x (-\cos x) - \int 1 \cdot (-\cos x) \d x \\
+&= -x\cos x + \int \cos x \d x \\
+&= -x \cos x + \sin x +c.
+\end{align*}
+Det viser, at valget af $f$ og $g$, har betydning for, hvor pænt vores resultat bliver.
+
+\item Bestem stamfunktionen til $h(x)=x^2e^x$:
+
+Vi vælger $f(x)=x^2$ og $g(x)=e^x$. Så har vi at $f'(x)=2x$ og $G(x)=e^x$. Indsætter vi dette i regneregel $1$. får vi at
+\begin{align*}
+\int x^2 e^x \d x &= x^2 e^x - \int 2x e^x \d x \\
+&= x^2 e^x - 2\int x e^x \d x.
+\end{align*}
+Det ser ikke videre pænt ud, men hvis vi ser, at det nye integral også består af to funktioner ganget sammen. Derfor kan vi bruge delvis integration endnu en gang. Lad $f(x)=x$ og $g(x)=e^x$, så er $f'(x)=1$ og $G(x)=e^x$ og vi får 
+\begin{align*}
+\int x e^x \d x &= x e^x - \int 1 \cdot e^x \d x \\
+&=  x e^x - \int e^x \d x \\
+&= xe^x - e^x + c.
+\end{align*}
+Indsætter vi nu det i den forrige udregning får vi at
+\begin{align*}
+\int x^2 e^x \d x = x^2e^x - 2(xe^x - e^x +c) = x^2e^x-2xe^x+2e^x+c.
+\end{align*}
+\item Bestem stamfunktionen til $h(x)=2^xe^x$:
+
+Vi lader $f(x)=2^x$ og $g(x)=e^x$. Så har vi at $f'(x)=2^x\ln 2$ og $G(x)=e^x$. Indsætter vi dette i regneregel $1.$ får vi
+\begin{align*}
+\int 2^x e^x \d x &= 2^x e^x - \int 2^x\ln (2) e^x \d x \\
+&=2^x e^x - \ln 2 \int 2^xe^x \d x.
+\end{align*}
+Vi ser, at integralet på begge sider er det samme, så hvis vi ligger $\displaystyle \ln 2 \int 2^xe^x \d x$ til på begge sider får vi
+\begin{align*}
+\int 2^x e^x \d x + \ln 2\int 2^xe^x \d x &=2^x e^x - \ln(2)\int 2^xe^x \d x + \ln(2)\int 2^xe^x \d x
+\end{align*}
+og ved at reducere det får vi
+\begin{align*}
+(1 + \ln 2)\int 2^xe^x \d x &=2^x e^x \Leftrightarrow \int 2^x e^x \d x = \frac{1}{1+\ln(2)}2^xe^x.
+\end{align*}
+Dermed har vi at stamfunktionen til $h(x)=2^xe^x$ er givet ved $\displaystyle \frac{1}{1+\ln(2)}2^xe^x$.
+\end{enumerate}
+
+
+
+

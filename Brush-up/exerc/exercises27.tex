@@ -1,0 +1,183 @@
+\subsection{Opgaver}
+\begin{enumerate}
+	\item Lad 
+	\begin{align*}
+	\vec{u}=\begin{bmatrix}
+	2\\3
+	\end{bmatrix},\quad \textup{og}\quad \vec{v}=\begin{bmatrix}
+	-1\\2
+	\end{bmatrix}.
+	\end{align*}
+	Udregn
+	\begin{align*}
+	3\vec{u},&&-\vec{v},&&\vec{u}+\vec{v},&&\vec{u}-\vec{v},&&\norm{\vec{u}},&&\norm{\vec{v}},&&\vec{u}\c \vec{v},&& \hat{\vec{u}}\c (2\vec{v}).
+	\end{align*}
+	
+	\item Bestem arealet af det parallelogram som udspændes af de to vektorer
+	\begin{align*}
+	\vec{u}=\begin{bmatrix}
+	3\\2
+	\end{bmatrix},
+	\vec{v}=\begin{bmatrix}
+	-2\\5
+	\end{bmatrix}.
+	\end{align*}
+	
+	\item Lad 
+	\begin{align*}
+	\vec{u}=\begin{bmatrix}
+	5-t\\ 2
+	\end{bmatrix},
+	\vec{v}=\begin{bmatrix}
+	4\\t+1
+	\end{bmatrix},
+	\end{align*}
+	hvor $t\in \R$. For hvilke $t$ gælder at
+	\begin{enumerate}
+		\item $\vec{u}$ og $\vec{v}$ er vinkelrette?
+		\item $\vec{u}$ og $\vec{v}$ er parallelle?
+	\end{enumerate}
+	
+	\item Udregn vinklen mellem vektorerne
+	\begin{align*}
+	\vec{u}=\begin{bmatrix}
+	\sqrt{3}\\1
+	\end{bmatrix},\quad \textup{og}\quad \vec{v}= \begin{bmatrix}
+	1\\\sqrt{3}
+	\end{bmatrix}.
+	\end{align*}
+	
+	\item Bestem $\vec{u}$ så at 
+	\begin{align*}
+	\begin{bmatrix}
+	3\\2
+	\end{bmatrix}=-\begin{bmatrix}
+	-1\\3
+	\end{bmatrix}+2\vec{u}
+	\end{align*}
+	
+	\item Lad 
+	\begin{align*}
+	\vec{u}=\begin{bmatrix}
+	1\\-1
+	\end{bmatrix},\quad \textup{og}\quad \vec{v}=\begin{bmatrix}
+	5\\2
+	\end{bmatrix},\quad \textup{og}\quad
+	\vec{w}=\begin{bmatrix}
+	7\\-3
+	\end{bmatrix}
+	\end{align*}
+	Udregn
+	\begin{align*}
+	\vec{u}\cdot(\vec{v}+\vec{w}),&&3\vec{u}+\vec{v}-2\vec{w},&&\det(\vec{u}-\vec{w},\vec{v}),&&\vec{u}\cdot \vec{v}+\vec{u}\cdot \vec{w},&&\frac{\vec{w}}{\norm{\vec{u}-\vec{v}}}.
+	\end{align*}
+	
+	\item Bestem arealet af det parallelogram som udspændes af de to vektorer
+	\begin{align*}
+	\vec{u}=\begin{bmatrix}
+	4\\7
+	\end{bmatrix},
+	\vec{v}=\begin{bmatrix}
+	-12\\-21
+	\end{bmatrix}.
+	\end{align*}
+	
+	
+	\item Lad
+	\begin{align*}
+	\vec{u}=\begin{bmatrix}
+	2\\1
+	\end{bmatrix},\quad \textup{og}\quad \vec{v}=\begin{bmatrix}
+	6t\\t^2-4
+	\end{bmatrix}.
+	\end{align*}
+	Bestem $t$ så at
+	\begin{enumerate}
+		\item $\vec{u}$ og $\vec{v}$ er parallelle.
+		\item $\vec{u}$ og $\vec{v}$ er vinkelrette.
+	\end{enumerate}
+	
+	
+	\item Bestem alle vektorer som står vinkelret på
+	\begin{align*}
+	\vec{u}=\begin{bmatrix}
+	2\\2
+	\end{bmatrix}.
+	\end{align*}
+	
+	
+	\item Lad 
+	\begin{align*}
+	\vec{u}=\begin{bmatrix}
+	u_1\\u_2
+	\end{bmatrix},
+	\end{align*}
+	og vis med en eksplicit udregning at $\vec{u}\cdot \hat{\vec{u}}=0$.
+	
+	
+	\item\label{it:2dvec11} Lad $\vec{u}$ og $\vec{v}$ være vektorer i $\R^2$ og vis at 
+	\begin{align*}
+	(\vec{u}\c \vec{v})^2\leq \norm{\vec{u}}^2 \norm{\vec{v}}^2.
+	\end{align*}
+	(Hint: Brug at $ \vec{u}\c \vec{v} =\norm{\vec{u}}\norm{\vec{v}}\cos(\theta) $, hvor $\theta$ er vinklen mellem $\vec{u}$ og $\vec{v}$.)
+	
+	\item\label{it:2dvec13} I denne opgave vil vi bruge resultater fra vektorregning til at bevise sumformlerne for sinus og cosinus. Lad $\theta$ og $\phi$ være vinkler med $\theta>\phi$ og definer
+	\begin{align*}
+	\vec{u}=\begin{bmatrix}
+	\cos(\theta)\\\sin(\theta)
+	\end{bmatrix},&& \vec{v}=\begin{bmatrix}
+	\cos(\phi)\\\sin(\phi)
+	\end{bmatrix}.
+	\end{align*}
+	Disse to vektorer er skitseret i Figur~\ref{fig:2dvec13}
+	\begin{figure}
+		\centering
+		\begin{tikzpicture}
+		\begin{axis}[xmin=-1,xmax=1,ymin=-1,ymax=1,axis x line=center,
+		axis y line=center, axis equal,xtick={-1,1},ytick={-1,1}]
+		%\addplot[blue,domain=0:2*pi,thick, samples=100] ({cos(deg(x))},{sin(deg(x))});
+		\addplot[domain=0:(sqrt(6)+sqrt(2))/4,thick,->] {(2-sqrt(3))*x};% \node[pos=0.7,below] {$\vec{v}$};
+		\addplot[domain=0:pi/12,samples=100,dotted] ({0.3*cos(deg(x))},{0.3*sin(deg(x))}) node[pos=0.5,right] {\tiny$\phi$};
+		
+		\addplot[domain=0:(sqrt(6)-sqrt(2))/4,thick,->] {1/(2-sqrt(3))*x};% \node[pos=0.7,left] {$\vec{u}$};
+		\addplot[domain=0:5*pi/12,samples=100,dotted] ({0.5*cos(deg(x))},{0.5*sin(deg(x))}) node[pos=0.5,right] {\tiny$\theta$};
+		\end{axis}
+		\end{tikzpicture}
+		\caption{Opgave~\ref{it:2dvec13}}
+		\label{fig:2dvec13}
+	\end{figure}
+		\begin{enumerate}
+			\item Redegør for at vinklen mellem $\vec{u}$ og $\vec{v}$ er $\theta-\phi$.
+			\item Brug formlen for vinklen mellem vektorer til at vise sumformlen
+			\begin{align*}
+			\cos(\theta-\phi)=\cos(\theta)\cos(\phi)+\sin(\theta)\sin(\phi).
+			\end{align*}
+			\item Vis at man kan opnå formlen 
+			\begin{align*}
+			\sin(\theta-\phi)=\sin(\theta)\cos(\phi)-\cos(\theta)\sin(\phi),
+			\end{align*}
+			 at anvende determinanten af $\vec{u}$ og $\vec{v}$. (Hint: vinklen regnes fra $\vec{v}$ til $\vec{u}$.)
+			
+		\end{enumerate}
+	
+	
+	\item\label{it:2dvec12} Vis at $\norm{\vec{u}}^2=\vec{u}\c \vec{u}$. Brug dette til at vise at 
+	\begin{align*}
+	\norm{\vec{u}+\vec{v}}^2=\norm{\vec{u}}^2+\norm{\vec{v}}^2+2(\vec{u}\c \vec{v}).
+	\end{align*}
+	
+	\item Brug Opgave~\ref{it:2dvec11} og Opgave~\ref{it:2dvec12} til at vise uligheden $\norm{u+v}\leq \norm{u}+\norm{v}$. (Hint Regn på $\norm{\vec{u}+\vec{v}}^2$.)
+	
+	\item Lad $\vec{v}\neq 0$ og vis at $\frac{\vec{v}}{\norm{\vec{v}}}$ er en enhedsvektor.
+	
+	
+	
+	
+	\item Vis at 
+	\begin{align*}
+	\vec{u}\c \vec{v}=\vec{v}\c \vec{u},&& \det(\vec{u},\vec{v})=-\det(\vec{v},\vec{u}),&& \norm{k\vec{u}}=\abs{k}\norm{\vec{u}},
+	\end{align*}
+	for alle vektorer $\vec{u},\vec{v}$ og $k\in \R$.
+	
+
+\end{enumerate}

@@ -1,0 +1,194 @@
+\section{Vektorer i planen 2}
+\begin{enumerate}
+	\item Linjen $l$ har parameterfremstilling
+	\begin{align*}
+	\begin{bmatrix}
+	x\\y
+	\end{bmatrix}=\begin{bmatrix}
+	1\\-6
+	\end{bmatrix}+t \begin{bmatrix}
+	1\\-3
+	\end{bmatrix}
+	\end{align*}
+	og ligning
+	\begin{align*}
+	3(x-1)+(y+6)=0.
+	\end{align*}
+	Skæringspunkterne er $(-1,0)$ og $(0,-3)$.
+	
+	\item Prikker man retningsvektoren for $m$ med normalvektoren for $l$ får man $0$, hvorfor linjerne må være parallelle.
+	
+	\item Indsætter vi $x$- og $y$-koordinaterne for linjen i cirklens ligning får vi
+	\begin{align*}
+	(3+t)^2+(-3-t)^2=2\quad \Leftrightarrow\quad 2t^2+12t+18=2.
+	\end{align*} 
+	Løsningerne til denne ligning er $t=-4$ og $t=-2$. Indsætter vi disse værdier i linjens ligning får vi skæringspunkterne $(1,-1)$ og $(-1,1)$.
+	
+		
+	\item Linjens ligning er
+	\begin{align*}
+	2(x-1)+3(y+1).
+	\end{align*}
+	Hvordan ligger denne linje i forhold til linjen med parameterfremstilling. Prikker man normalvektoren for denne linje med retningsvektoren for den anden får man $0$. Altså er de to linjer parallelle. Dade begge går gennem punktet $(7,5)$ må de være sammenfaldende.
+	
+	
+	
+	
+	\item Linjen har parameterfremstilling
+	\begin{align*}
+		\begin{bmatrix}
+		x\\y
+		\end{bmatrix}=\begin{bmatrix}
+		-2\\0
+		\end{bmatrix}+t \begin{bmatrix}
+		7\\5
+		\end{bmatrix}.
+	\end{align*}
+ 	Prikker man retningsvektoren for denne linje med normalvektoren for den anden får man $0$. Dermed er linjerne parallelle. da $(-2,0)$ ligger på den ene linje men ikke den anden er de ikke sammenfaldende.
+		
+	\item Prikker man retningsvektoren for denne linje med normalvektoren for den anden får man $31$. Dermed er de to linjer ikke parallelle og de må have præcist et skæringspunkt. Indsætter vi koordinaterne fra parameterfremstillingen i linjens ligning får vi ligningen
+	\begin{align*}
+	3(7t-6)+2(5t-2)=9.
+	\end{align*}
+	Løsningen er $t=1$ hvilket giver et skæringspunkt på $(1,3)$.
+	
+	\item Først bestemmer vi cirklernes skæringspunkter. Ved at gange ud har de to ligninger formen
+	\begin{align*}
+	x^2+1-2x+y^2+1-2y=1,&&x^2+1+2x+y^2+1+2y=5.
+	\end{align*}
+	Trækker vi den første ligning fra den anden får vi
+	\begin{align*}
+	4x+4y=4\quad \Leftrightarrow\quad x+y=1.
+	\end{align*}
+	Lægger vi de to cirklers ligninger sammen får vi
+	\begin{align*}
+	2x^2+4+2y^2=6\quad \Leftrightarrow\quad x^2+y^2=1.
+	\end{align*}
+	Indsætter vi $x=1-y$ i denne ligning får vi 
+	\begin{align*}
+	2y^2-2y=0
+	\end{align*}
+	hvilket giver at $y=0$ og $y=1$. Når $y=0$ skal $x=1$ og når $y=1$ skal $x=0$. Dermed har vi fundet skæringspunkterne $(0,1)$ og $(1,0)$. Parameterfremstillingen bliver så
+	\begin{align*}
+	\begin{bmatrix}
+	x\\y
+	\end{bmatrix}=\begin{bmatrix}
+	0\\1
+	\end{bmatrix}+t \begin{bmatrix}
+	1\\-1
+	\end{bmatrix}.
+	\end{align*}
+	
+
+	
+	\item\label{it:2dvec14} De to linjer har retningsvektorer 
+	\begin{align*}
+	\vec{u}=\begin{bmatrix}
+	1\\1
+	\end{bmatrix},\quad \textup{og} \quad \vec{v}= \begin{bmatrix}
+	-1\\2+\sqrt{3}
+	\end{bmatrix}.
+	\end{align*}
+	Formlen for vinklen mellem vektorer giver at
+	\begin{align*}
+	\cos(\theta)=\frac{\vec{u}\c \vec{v}}{\norm{\vec{u}}\norm{\vec{v}}}=\frac{1+\sqrt{3}}{\sqrt{2}\sqrt{1+(2+\sqrt{3})^2}}=\frac{1+\sqrt{3}}{\sqrt{2}\sqrt{8+4\sqrt{3}}}=\frac{1+\sqrt{3}}{2\sqrt{4+2\sqrt{3}}}=\frac{1}{2}.
+	\end{align*}
+	Dermed ser vi at $\theta=\frac{\pi}{3}$.
+	
+	
+%	\begin{figure}
+%		\centering
+%		\begin{tikzpicture}
+%		\begin{axis}[xmin=-1,xmax=1,ymin=-1,ymax=3,axis x line=center,
+%		axis y line=center, axis equal]
+%		\addplot[thick,blue] {x+1};
+%		\addplot[thick,red] {-(2+sqrt(3))*x+3};
+%		\addplot[domain=pi/4:7*pi/12,thick,samples=100] ({2/(sqrt(3)+3)+0.2*cos(deg(x))},{(5+sqrt(3))/(sqrt(3)+3)+0.2*sin(deg(x))}) node[label=above right:\small$\theta$,pos=1] {};
+%		\end{axis}
+%		\end{tikzpicture}
+%		\caption{Opgave~\ref{it:2dvec14}}
+%		\label{fig:2dvec14}
+%	\end{figure}
+%	
+	
+	\item\label{it:2dvec15}Svarene er:
+	
+	\begin{enumerate}
+		\item Da trekanten er retvinklet følger det fra klassiske trigonometriske formler at
+		\begin{align*}
+		\cos(\theta)=\frac{\norm{\vec{w}}}{\norm{\vec{u}}}.
+		\end{align*}
+		
+		\item Vi har at $\cos(\theta)=\frac{\vec{u}\c \vec{v}}{\norm{\vec{u}}\norm{\vec{v}}}$ hvilket kombineret med forrige formel giver at 
+		\begin{align*}
+		\frac{\norm{\vec{w}}}{\norm{\vec{u}}}=\cos \theta=\frac{\vec{u}\c \vec{v}}{\norm{\vec{u}}\norm{\vec{v}}}.
+		\end{align*}
+		Ganger vi denne ligning igennem med $\norm{\vec{u}}$ får vi at		
+		\begin{align}\label{eq:2dvec11}
+		\norm{\vec{w}} =\frac{\vec{u}\cdot \vec{v}}{\norm{\vec{v}}}.
+		\end{align}
+		
+		\item Da $\vec{v}$ og $\vec{w}$ har samme retning gælder at
+		\begin{align*}
+		\frac{\vec{w}}{\norm{\vec{w}}}=\frac{\vec{v}}{\norm{\vec{v}}}.
+		\end{align*}
+		Isolerer vi $\vec{w}$ i denne ligning får vi
+		\begin{align*}
+		\vec{w}=\norm{\vec{w}}\frac{\vec{v}}{\norm{\vec{v}}}
+		\end{align*}
+		og bruger vi udtrykket for $\norm{\vec{w}}$ i~\eqref{eq:2dvec11} får vi at
+		\begin{align*}
+		\vec{w}=\frac{\vec{u}\cdot \vec{v}}{\norm{\vec{v}}}\frac{\vec{v}}{\norm{\vec{v}}}=\frac{\vec{u}\c \vec{v}}{\norm{\vec{v}}^2}\vec{v}.
+		\end{align*}
+		
+		
+	\end{enumerate}
+%	\begin{figure}
+%		\centering
+%		\begin{tikzpicture}
+%		\begin{axis}[xmin=-0.1,xmax=4,ymin=-0.1,ymax=5,axis x line=center,
+%		axis y line=center, axis equal]
+%		\addplot[domain=0:1,thick,blue,->] {x} node[pos=0.5,below] {$\vec{v}$};
+%		\addplot[domain=0:(1+sqrt(3)),thick,gray,dashed,->] {x} node[pos=0.8,below] {$\vec{w}$};
+%		\addplot[domain=0:2,thick,red,->] {sqrt(3)*x} node[pos=0.5,above,left] {$u$};
+%		\addplot[domain=2:(1+sqrt(3)),dotted,gray,thick,<-] {-1*x+2+2*sqrt(3))} node[pos=0.5,above,right] {$u-\vec{w}$};
+%		\addplot[domain=pi/4:pi/3,thick,samples=100] ({0.4*cos(deg(x))},{0.4*sin(deg(x))}) node[label=above right:\small$\theta$,pos=1] {};
+%		\end{axis}
+%		\end{tikzpicture}
+%		\caption{Opgave~\ref{it:2dvec15}}
+%		\label{fig:2dvec15}
+%	\end{figure}
+	
+	\item Svarene er:
+	\begin{enumerate}
+		\item $\vec{w}_1=\frac{1}{2}\begin{bmatrix}
+		3\\1
+		\end{bmatrix}.$
+		\item $\vec{w}_2=\begin{bmatrix}
+		1\\2
+		\end{bmatrix}.$
+		\item $\vec{w}_3=\begin{bmatrix}
+		0\\0
+		\end{bmatrix}.$
+	\end{enumerate}
+
+%	\item Bestem afstanden fra punktet $P=(2,3)$ til linjen $l$ givet ved $3x+2y=0$. Da linjen går gennem origo kan vi projicere stedvektoren $u$ til $P$ ind på linjen uden at skulle til at flytte på denne vektor. Fra linjens forskrift ses at den har retningsvektor
+%	\begin{align*}
+%	v=\begin{bmatrix}
+%	2\\-3
+%	\end{bmatrix}.	
+%	\end{align*}
+%	Dette giver at projektionen $\vec{w}$ af $u$ på $v$ er
+%	\begin{align*}
+%	\vec{w}=\frac{-5}{13}\begin{bmatrix}
+%	2\\-3
+%	\end{bmatrix}.	
+%	\end{align*}
+%	Længden af vektoren $u-\vec{w}$ er præcis den afstand vi søger og denne er:
+%	\begin{align*}
+%	content...
+%	\end{align*}
+%	
+%	
+%	 Bestem efterfølgende afstanden fra $P$ til linjen $m$ givet ved $3x+2y=1$.
+\end{enumerate}

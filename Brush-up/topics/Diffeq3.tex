@@ -1,0 +1,54 @@
+\section{Homogene førsteordens differentialligninger}
+\noindent Vi har hidtil kun betragtet differentialligninger med konstante koefficienter. Vi vil nu betragte mere generelle differentialligninger.
+
+En homogen lineær førsteordens differentialligning med variable koefficienter er på formen 
+\begin{align*}
+f'(x) + a(x)f(x)=0.
+\end{align*}
+Homogen betyder at højresiden er lig $0$, førsteordens betyder, at der kun indgår en første afledede af $f$ og variable koefficienter betyder, at funktionen $a$ kan varierer når $x$ varierer (i modsætning til konstante koefficienter hvor $a(x)=k$).
+
+En sådan ligning har den fuldstændige løsning 
+\begin{align}\label{eq:diffeq3et}
+f(x)=ce^{-A(x)},
+\end{align}
+hvor $A(x)$ er en vilkårlig stamfunktionen til $a$ (ofte valgt med konstant lig $0$).
+
+\paragraph*{Eksempler:}
+\begin{enumerate}
+\item Løs begyndelsesværdiproblemet $f'(x) + \cos (x)f(x) = 0$ med $f(0)=\frac{1}{2}$:
+
+Vi ser at $a(x)=\cos x$. Derudover har vi fra \eqref{eq:diffeq3et} at den fuldstændige løsning er på formen
+\begin{align*}
+f(x)=ce^{-A(x)}.
+\end{align*}
+Vi bestemmer først $A(x)$, ved at integrere $a(x)=\cos x$
+\begin{align*}
+A(x) = \int a(x) \d x = \int \cos x \d x = \sin x +c,
+\end{align*}
+hvor vi vælger $c=0$. Dermed har vi, at $f(x)=ce^{-\sin x }$. Vi bestemmer nu $c$ ved at benytte vores begyndelsesbetingelse
+\begin{align*}
+\frac{1}{2} = f(0)= ce^{-\sin 0} = ce^0 =c. 
+\end{align*}
+Det giver, at løsningen til vores begyndelsesværdiproblem er $f(x) = \frac{1}{2}e^{-\sin x}$.
+\item Løs begyndelsesværdiproblemet $f'(x) +  e^x f(x) = 0$ med $f(0)=e$:
+
+Vi ser, at $a(x)=e^x$. Derudover har vi igen, at den fuldstændige løsning er på formen
+\begin{align*}
+f(x)=ce^{-A(x)}.
+\end{align*}
+Vi bestemmer først $A(x)$, ved at integrere $a(x)=e^x$
+\begin{align*}
+A(x) = \int a(x) \d x = \int e^x \d x = e^x + c,
+\end{align*}
+hvor vi vælger $c=0$. Dermed har vi, at $f(x)=ce^{-e^x }$. Vi bestemmer nu $c$ ved at benytte vores begyndelsesbetingelse
+\begin{align*}
+e = f(0)= ce^{-e^0} = ce^{-1}  \Leftrightarrow c=e^2
+\end{align*}
+Det giver at, løsningen til vores begyndelsesværdiproblem er $f(x) = e^2e^{-e^x}$.
+\end{enumerate}
+
+
+
+
+
+

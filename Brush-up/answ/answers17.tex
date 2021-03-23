@@ -1,0 +1,326 @@
+\newpage
+\section{Optimering}
+\begin{enumerate}
+	
+	
+	\item Da omkræsen skal være $20cm$ har vi at
+	\begin{align*}
+	20=2x+2y.
+	\end{align*}
+	Rumfanget $V$ for kassen er en funktion der afhænger af både $x$ og $y$ givet ved
+	\begin{align*}
+	V(x,y)=5xy.
+	\end{align*}
+	Isolerer vi $y$ i formlen for omkredsen og indsætter i definitionen af $V$ får vi
+	\begin{align*}
+	V(x)=50x-5x^2.
+	\end{align*}
+	Dette er en parabel som åbner nedad så den vil nødvendigvis have et maksimum i toppunktet. For at finde det løser vi ligningen
+	\begin{align*}
+	0=v'(x)=50-10x,
+	\end{align*}
+	og får $x=5$. Det giver at det maksimale rumfang er $ V(5)=125 $.
+	
+	\item De lokale minima findes i punkterne $(-2,-\frac{5}{3})$ og $(1,\frac{7}{12})$ og det lokale maksimum findes i $(0,1)$.
+	
+	\item Hvis sidelængderne betegnes med $x$ og $y$ får vi at $x=75$ og $y=75$.
+	
+	\item Lad $f(x)=ax^2+bx+c$ være et generelt andengradspolynomium. Ved at differentiere $f$ får vi at
+	\begin{align*}
+	f'(x)=2ax+b.
+	\end{align*}
+	Dermed får at $x=-\frac{b}{2a}$ løser ligningen, hvilket giver $x$-koordinatet til toppunktet. Indsætter vi denne værdi i $f$ får vi
+	\begin{align*}
+	f(-\frac{b}{2a})=a(-\frac{b}{2a})^2-\frac{b^2}{2a}+c=-\frac{b^2}{4a}+\frac{4ac}{4a}=-\frac{d}{4a}.
+	\end{align*}
+	
+	
+	\item Hvis $x$ er bundens sidelængder og $h$ er højden af kassen så skal disse størrelser opfylde
+	\begin{align*}
+	x^2h=5000.
+	\end{align*}
+	Overfladearealet $O$ er en funktion som afhænger af $x$ og $h$ således:
+	\begin{align*}
+	O(x,h)=x^2+4xh.
+	\end{align*}
+	Bruger vi formlen for rumfanget til at isolere $h$ og efterfølgende indsætter i $O$ får vi at
+	\begin{align*}
+	O(x)=x^2+\frac{20000}{x}.
+	\end{align*}
+	Ved at løse ligningen $O'(x)=0$ får vi at $x=10\sqrt[3]{10}$ er det lokale minimum for $O$. For at bestemme det tilhørende $h$
+	har vi at
+	\begin{align*}
+	h=\frac{5000}{10^2 10^{\frac{2}{3}}}=\frac{10^3 5}{10^2 10^{\frac{2}{3}}}=10^{\frac{1}{3}}5=5\sqrt[3]{10}.
+	\end{align*}
+	
+	\item Svaret er $a=-\frac{1}{2}$ og $b=\frac{3}{2}$.
+		
+	\item \label{it:opt2ans} Svarene er:
+	\begin{enumerate}
+		\item Det er klart at det størst mulige areal er $1$ og opnås når $x=1$.
+		\item Arealet er givet ved formlen $A(x)=\frac{3}{2}x^2-x+\frac{1}{2}$, og løser man $A'(x)=0$ fås at $x=\frac{1}{3}$ og det samlede areal bliver så $A(\frac{1}{3})=\frac{1}{3}$.
+	\end{enumerate}
+%	
+%		\begin{figure}
+%		\centering
+%		\begin{tikzpicture}
+%		\draw (0,0)--(0,2)--(2,2)--(2,0)--node[below] {$x$}cycle;
+%		\draw (2,0)--(2,3)--(5,0)--node[below] {$1-x$}cycle;
+%		\end{tikzpicture}
+%		\caption{Opgave~\ref{it:opt2}}
+%		\label{fig:opt2}
+%	\end{figure} 
+	
+	\item Funktionen har et globalt maksimum i punktet $(0,1)$.
+	
+	
+	\item Da vi bliver bedt om at finde den største og mindste tangenthældning skal vi maksimere og minimere funktionen $f''(x)$. Vi har at
+	\begin{align*}
+	f'(x)=-2(x+1)e^{-(x+1)^2}
+	\end{align*}
+	og fra hintet har vi at
+	\begin{align*}
+	f''(x)=e^{-(x+1)^2}(4x^2+8x+2).
+	\end{align*}
+	Da $e^{-(x+1)^2}$ er positiv får vi at
+	\begin{align*}
+	f''(x)=0\quad \Leftrightarrow \quad 4x^2+8x+2=0 \quad \Leftrightarrow \quad x=-1\pm \frac{\sqrt{2}}{2}.
+	\end{align*}
+	Med dette resultat kan vi opstille en monotonilinje for $f'$ (se Tabel~\ref{fig:opt2}). Monotonilinjen viser at $f'$ har lokalt maksimum i $-1- \frac{\sqrt{2}}{2}$ og lokalt minimum i $-1+\frac{\sqrt{2}}{2}$. Den eksponentielle faktor $e^{-(x+1)^2}$ går mod $0$ hurtigere end polynomiet $-2x-2$ går mod uendelig, hvorfor de punkter vi har fundet er globale ekstremumspunkter. Ved at indæstte i $f'$ får vi at den maksimale og minimale hældning er $\sqrt{\frac{2}{e}}$ og $-\sqrt{\frac{2}{e}}$.
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{@{}l  c c c c c@{}}
+			$x$      & $-2$ 			 & $-1-\frac{\sqrt{2}}{2}$	& $-1$		& $-1+\frac{\sqrt{2}}{2}$	&$0$			\\ \toprule
+			$f''(x)$  & $\frac{2}{e}$	 &     $0$ 		 			& $-2$		& $0$						&$\frac{2}{e}$	\\ \midrule
+			$f'(x)$   & $\nearrow$&									& $\searrow$&							&$\nearrow$			\\ \bottomrule  
+		\end{tabular}	
+		\caption{Monotonilinje for $f'$}
+		\label{fig:opt2}
+\end{table}	
+	
+	\item Punktet $P$ kan beskrives som
+	\begin{align*}
+	P=(\cos \theta,\sin\theta),
+	\end{align*}
+	hvor $\theta$ er vinklen til $P$ i radianer. Arealet af rektanglet kan så beskrives som
+	\begin{align*}
+	A(\theta)=2\sin(\theta)2\cos(\theta)=2\sin(2\theta).
+	\end{align*}
+	Løser vi $A'(\theta)=0$ får vi at 
+	\begin{align*}
+	4\cos(2\theta)=0\quad\Leftrightarrow\quad \cos(2\theta)=0.
+	\end{align*}
+	Da vi kun er interesserede i $\theta\in [0,\frac{\pi}{2}]$ får vi at $\theta=\frac{\pi}{4}$. Dermed bliver sidelængderne af rektanglet alle lig $\sqrt{2}$ of det størst mulige areal er dermed $2$.
+	
+	
+	\item Inddeler vi sekskanten i et rektangel som i forrige opgave og to trekanter bliver formlen for arealet
+	\begin{align*}
+	A(\theta)=2\sin(\theta)2\cos(\theta)+2\sin\theta(1-\cos(\theta))=\sin(2\theta)+2\sin \theta.
+	\end{align*}
+	Betragter vi ligningen $A'(\theta)=0$ for $\theta\in [0,\frac{\pi}{2}]$ ser vi at
+	\begin{align*}
+	\cos(2\theta)=-\cos(\theta)
+	\end{align*}
+	og bruger vi at $-\cos(\theta)=\cos(\pi-\theta)$ må vi have at 
+	\begin{align*}
+	2\theta=\pi-\theta \quad\Leftrightarrow\quad \theta=\frac{\pi}{3}.
+	\end{align*}
+	Dette giver et areal på $\frac{3\sqrt{3}}{2}$.
+	
+	
+	
+	\item Formlen for trekantens areal er 
+	\begin{align*}
+	A(\theta)=\cos(\theta)(1+\sin(\theta))=\cos(\theta)+\frac{1}{2}\sin(2\theta),
+	\end{align*}
+	Vi får at
+	\begin{align*}
+	A'(x)=0\quad\Leftrightarrow\quad \sin(\theta)=\cos(2\theta).
+	\end{align*}	
+	Bruger vi at $\sin(\theta)=\cos(\frac{\pi}{2}-\theta)$ får vi at $\theta=\frac{\pi}{6}$, hvilket giver et areal på $\frac{3\sqrt{3}}{4} $.
+	
+	
+	\item Sidelængderne bliver $x=8$ og $y=24$. Arealet er $192$. 
+	
+	\item Arealet af rektanglet er givet ved
+	\begin{align*}
+	A(x)=\sin(x),
+	\end{align*}
+	og fra vores kursusgang om trigonometriske funktioner ved vi allerede at $\sin x$ har sit første maksimum i $\frac{\pi}{2}$. Dette giver sidelængder på $\frac{\pi}{2}$ og $\frac{2}{\pi}$ og et areal på $1$.
+	
+	\item I et vilkårligt punkt $x_0$ er ligningen for tangenten givet ved 
+	\begin{align*}
+	y=2(x_0-2)(x-x_0)+(x_0-2)^2.
+	\end{align*}
+	Denne tangent skærer koordinatakserne i
+	\begin{align*}
+	x&=\frac{1}{2}x_0+1\\
+	y&=4-x_0^2.
+	\end{align*}
+	Arealet af trekanten som funktion af $x_0$ er dermed givet ved
+	\begin{align*}
+	A(x_0)=\frac{1}{2}(\frac{1}{2}x_0+1)(4-x_0^2)=-\frac{1}{4}x_0^3-\frac{1}{2}x_0^2+x_0+2.
+	\end{align*}
+	Løser vi ligningen $A'(x_0)=0$ får vi at $x_0=\frac{2}{3}$ og $x_0=-2$. Den første værdi ligger i vores interval og kan let vises at være et maksimum. Vi får en tangentligning givet ved
+	\begin{align*}
+	y=-\frac{8}{3}(x-\frac{2}{3})+\frac{16}{9},
+	\end{align*}
+	samt at det maksimale areal er $\frac{64}{27}$. Var intervallet vi betragtede lukket ville det mindste areal af trekanten være $0$ og være taget i $-2$ og $2$, men da intervallet er åbent er der ikke noget mindste areal. 
+	
+	
+	\item\label{it:opt1} Når kassen er foldet vil den have en højde på $x$ og sidelængder på $1-2x$. Derfor er rumfanget
+	\begin{align*}
+	V(x)=x(1-2x)^2=4x^3-4x^2+x.
+	\end{align*}
+	Ved at løse $V'(x)=0$ fås at $x=\frac{1}{2}$ og $x=\frac{1}{6}$. Ved at undersøge monotoniforholdene ses at $x=\frac{1}{6}$ er det maksimum vi søger.
+	
+	
+	\item Funktionen vi skal optimere er
+	\begin{align*}
+	V(x)=3(4x^3-4x^2+x)+2x^3=14x^3-12x^2+3x,
+	\end{align*}
+	hvor $x\in [0,\frac{1}{2}]$. Gør vi det ser vi at $V$ har et lokalt maksimum i $x=\frac{4-\sqrt{2}}{14}$, hvor funktionsværdien er
+	\begin{align*}
+	\frac{10+\sqrt{2}}{49}<\frac{12}{49}<\frac{1}{4}.
+	\end{align*}
+	Ved at undersøge endepunkterne ser vi at $x=\frac{1}{2}$ er det globale maksimum for $V$ på intervallet $ [0,\frac{1}{2}] $. Dermed får man det største udbytte ved at lave to lukkede kasser.
+
+%	
+%	\begin{figure}
+%		\centering
+%		\begin{tikzpicture}
+%		\draw (0,0)--(0,5)--(5,5)--(5,0)--cycle;
+%		\draw[dashed] (1,0)--node[right] {$x$} (1,1)-- node[above] {$x$} (0,1);
+%		\draw[dashed] (4,0)--node[left] {$x$} (4,1)-- node[above] {$x$} (5,1);
+%		\draw[dashed] (5,4)--node[below] {$x$} (4,4)-- node[left] {$x$} (4,5);
+%		\draw[dashed] (0,4)--node[below] {$x$} (1,4)-- node[right] {$x$} (1,5);
+%		\draw[dotted] (1,1)--(4,1)--(4,4)--(1,4)--cycle;
+%		\end{tikzpicture}
+%		\caption{Opgave~\ref{it:opt1}}
+%		\label{fig:opt1}
+%	\end{figure} 
+
+
+	\item De kritiske punkter for $ g(x)=x^3+\frac{3}{4}x^2-\frac{3}{2}x $ er $x=-1$ og $x=\frac{1}{2}$.
+	\begin{enumerate}
+		\item Vi skal undersøge $g$ i de kritiske punkter som ligger i $ [-2,\frac{3}{2}] $, samt intervalendepunkterne. Det giver at vi finder et globalt maksimum i $x=\frac{3}{2}$ og et globalt minimum i $x=-2$. Yderligere har vi at $g(\frac{3}{2})=\frac{45}{16}$ og at $g(-2)=-2$.
+		\item Vi skal undersøge $g$ i de kritiske punkter som ligger i  $ [-\frac{3}{2},1] $, samt intervalendepunkterne. Det giver at vi finder et globalt maksimum i $x=-1$ og et globalt minimum i $x=\frac{1}{2}$. Yderligere har vi at $g(-1)=\frac{5}{4}$ og at $g(\frac{1}{2})=-\frac{7}{16}$.
+	\end{enumerate}
+ 
+ 	\item \label{it:opt3} Hvis $\theta$ betegner vinklen nævnt i hintet får vi at
+ 	\begin{align*}
+ 	\frac{H}{R}=\tan \theta= \frac{H-h}{r}.
+ 	\end{align*}
+ 	Isolerer vi for $h$ får vi at
+ 	\begin{align*}
+ 	h=H(1-\frac{r}{R}),
+ 	\end{align*}
+ 	hvilket betyder at rumfanget af den lille kegle er
+ 	\begin{align*}
+ 	V(r)=\frac{\pi}{3} r^2 H(1-\frac{r}{R}).
+ 	\end{align*}
+ 	Ved at differentiere $V$ og løse ligningen $V'(r)=0$, ser vi at
+ 	\begin{align*}
+ 	V'(r)=\frac{2}{3}\pi Hr-\pi r^2 \frac{H}{R},
+ 	\end{align*}
+ 	og at
+ 	\begin{align*}
+	\frac{2}{3}\pi Hr-\pi r^2 \frac{H}{R}=0\quad \Leftrightarrow\quad \frac{2}{3}=r \frac{1}{R}\quad \Leftrightarrow\quad \frac{2}{3}R=r.
+ 	\end{align*}
+ 	Man kan vise at dette er det maksimum vi søger. Hvis vi sætter $r$ ind i formlen for $h$ får vi at
+ 	\begin{align*}
+ 	h=\frac{1}{3}H.
+ 	\end{align*}
+ 	Det maksimale rumfang af den lille kegle bliver dermed
+ 	\begin{align*}
+ 	V=\frac{\pi}{3}\frac{4}{27}R^2H.
+ 	\end{align*}
+ 	hvilket er $\frac{4}{27}$ af rumfanget af den store kegle.
+ 	
+% \begin{figure}
+% 	\centering
+% 	 \begin{tikzpicture}
+% 	\draw[dashed] (0,0) arc (170:10:2cm and 0.4cm)coordinate[pos=0] (a);
+% 	\draw (0,0) arc (-170:-10:2cm and 0.4cm)coordinate (b);
+% 	\draw[densely dashed] ([yshift=4cm]$(a)!0.5!(b)$) -- node[right,font=\footnotesize] {$H$} coordinate[pos=0.95] (c) ([yshift=2cm]$(a)!0.5!(b)$)-- node[right,font=\footnotesize] {$h$} coordinate[pos=0.95] (aa) ($(a)!0.5!(b)$)
+% 	-- node[above,font=\footnotesize] {$R$}coordinate[pos=0.05] (bb) (b);
+%	\draw (aa) -| (bb);
+% 	\draw (a) --node {} coordinate[pos=0.5] (aaa) ([yshift=4cm]$(a)!0.5!(b)$) -- node {} coordinate[pos=0.5](bbb) (b);
+% 	\draw[densely dashed] (aaa) arc (170:10:1cm and 0.2cm);
+% 	\draw (aaa) arc (-170:-10:1cm and 0.2cm);
+% 	\draw (aaa)--($(a)!0.5!(b)$)--(bbb);
+% 	\draw[densely dashed] ($(aaa)!0.5!(bbb) $)--node[above,font=\footnotesize] {$r$} coordinate[pos=0.1] (d) (bbb);
+% 	\draw (c)-| (d);
+% 	\end{tikzpicture}
+% 	\caption{Opgave~\ref{it:opt3}}
+% 	\label{fig:opt3}
+% \end{figure}
+
+
+	\item Bemærk at hvis $r=1$ så gælder 
+	\begin{align*}
+	(1+x)^r=(1+x)^1=1+x=1+rx.
+	\end{align*}
+	Hvis $r>1$ bruger vi hintet og får at
+	\begin{align*}
+	f'(x)=r(1+x)^{r-1}-r,
+	\end{align*}
+	og løser vi ligningen $f'(x)=0$ får vi
+	\begin{align*}
+	r(1+x)^{r-1}-r=0\quad\Leftrightarrow \quad (1+x)^{r-1}=1.
+	\end{align*}
+	Da $r>1$ så har vi at
+	\begin{align*}
+	(1+x)^{r-1}=1\quad\Leftrightarrow \quad 1+x=1^{\frac{1}{r-1}}\quad\Leftrightarrow \quad 1+x=1\quad\Leftrightarrow \quad x=0.
+	\end{align*}
+	Altså er $x=0$ et kritisk punkt og vi mangler blot at vise at det er det globale minimum for $f$. Vælger vi punkter til venstre og højre for $x=0$ får vi at
+	\begin{align*}
+	f'(-\frac{1}{2})&=r(1-\frac{1}{2})^{r-1}-r=r((\frac{1}{2})^{r-1}-1)=r((\frac{1}{2})^{r-1}-1^{r-1})<0,\\
+	f'(1)&=r(1+1)^{r-1}-r=r(2^{r-1}-1)=r(2^{r-1}-1^{r-1})>0,
+	\end{align*}
+	hvor den sidste ulighed i hver udregning kommer af at $x^a$ er en voksende funktion når $a>0$. Dette betyder at $f$ e aftagende før $x=0$ og voksende efter. Altså må $x=0$ være det globale minimum for $f$. Dette medfører at
+	\begin{align*}
+	0=f(0)\leq f(x)= (1+x)^r-(1+rx)\quad \Leftrightarrow\quad (1+x)^r\geq 1+rx.
+	\end{align*}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+\end{enumerate}

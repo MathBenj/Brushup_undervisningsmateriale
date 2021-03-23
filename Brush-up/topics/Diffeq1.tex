@@ -1,0 +1,87 @@
+\section{Introduktion til Differntialligninger}
+\noindent Vi har tidligere studeret både ligninger og differentialkvotienter. Det næste vi gerne vil betragte er ligninger der indeholder differentialkvotienter, også kaldet differentialligninger. I modsætning til en almindelig ligning, hvor den ubekendte er et tal, er den ubekendte i en differentialligning en funktion. Det betyder, at vi gerne vil bestemme alle de funktioner, vi kan indsætte på den ubekendtes plads i en differentialligning, så den er sand.
+
+Eksempler på differentialligninger er
+\begin{align*}
+\frac{d}{dx}f(x) = f(x), \quad y'(x)=5, \quad f'(x) +x = 3, \quad y'(x)=x^2.
+\end{align*}
+
+Hvis man får givet en funktion $f$ og en differentialligning, så er den nemmeste måde at tjekke om $f$ er en løsning ved at ``gøre prøve''. At gøre prøve betyder, at vi indsætter $f$ i differentialligningen og ser om den opfylder, at venstresiden er lig med højresiden. Hvis en funktion $f$ løser differentialligningen, så kalder man $f$ for en partikulær løsning til differentialligningen.
+
+\paragraph*{Eksempler:}
+\begin{enumerate}
+\item Vis at $f(x)=\frac{1}{3}x^3+9$ er en løsning til differentialligningen $\displaystyle \frac{d}{dx}f(x) = x^2$:
+
+Vi ser, at $f$ ikke indgår i vores differentiallignings højreside, hvilket betyder vi kun behøver at betragte venstresiden. Vi udregner derfor venstresiden
+\begin{align*}
+\frac{d}{dx}f(x)= \frac{d}{dx} \Big( \frac{1}{3}x^3+9 \Big) = \frac{1}{3}\cdot 3 x^2 = x^2.
+\end{align*}
+Da både venstresiden og højresiden af vores ligning er lig $x^2$, så er $f(x)=\frac{1}{3}x^3 + 9$ en partikulær løsning til differentialligningen.
+\item Vis at $f(x)=2+5e^{-3x}$ er en løsning til differentialligningen $y'-6=-3y$:
+
+Vi tjekker først hvad venstresiden giver
+\begin{align*}
+y'-6=f'(x) -6 = \frac{d}{dx}(2+5e^{-3x} )-6 = 5 \cdot (-3) e^{-3x}-6 = -15e^{-3x}-6.
+\end{align*}
+Dernæst udregner vi højresiden
+\begin{align*}
+-3y = -3f(x) = -3(2+5e^{-3x}) = -6 -15 e^{-3x}.
+\end{align*}
+Vi ser nu at både højre og venstre siden er lig med $-6-15e^{-3x}$, hvilket betyder at $f(x)=2+5e^{-3x}$ er en partikulær løsning til vores differentialligning.
+\end{enumerate}
+
+\paragraph*{Fuldstændige løsning:}
+Hvis vi igen betragter differentialligningen $\displaystyle \frac{d}{dx}f(x) = x^2$ så ser vi at funktionen $f(x)=\frac{1}{3} x^3+1$ også er en løsning da
+\begin{align*}
+\frac{d}{dx} f(x) = \frac{d}{dx} \Big(\frac{1}{3}x^3+1 \Big) = x^2.
+\end{align*}
+Det betyder at der er mere end en løsning til differentialligningen $\displaystyle \frac{d}{dx}f(x)=x^2$, faktisk er der uendeligt mange, da vi kan ændre konstanten der er lagt til. Det næste vi vil studere er de fuldstændige løsninger, som er en måde at finde alle de mulige løsninger til en given differentialligning.
+
+Hvis vi har en differentialligning på formen
+\begin{align*}
+f'(x)=k,
+\end{align*}
+hvor $k\in \mathbb{R}$, så kan vi finde den fuldstændige løsning ved at integrere begge sider
+\begin{align*}
+\int f'(x) \d x = \int k \d x &\Leftrightarrow f(x) + c_1 = kx + c_2 \\
+&\Leftrightarrow f(x) = kx + (c_2 - c_1) \\
+&\Leftrightarrow f(x) = kx + c.
+\end{align*}
+Ved at gøre prøve ser vi, at venstresiden er
+\begin{align*}
+f'(x) = \frac{d}{dx}(kx + c) = k,
+\end{align*}
+hvilket viser, at venstresiden er lig med højresiden. Det betyder, at samtlige løsninger til differentialligningen $f'(x)=k$ er på formen $f(x)=kx+c$.
+
+
+\paragraph*{Tabel over differentialligninger og deres fuldstændige løsninger:}
+Tabel~\ref{tab:Diffeq1} indeholder en liste over de mest almindelige differentialligninger og deres fuldstændige løsninger (nogle af dem kommer I selv til at vise i opgaveregningen).
+\begin{table}[h!]
+\centering
+\begin{tabular}{l !{\qquad} {l}!}
+Differentialligning     & Fuldstændig løsning				\\ \toprule
+$f'(x)=k$				& $f(x)=kx+c$						\\ \midrule
+$f'(x)=h(x)$			& $f(x)=\int h(x) \d x$				\\ \midrule
+$f'(x)=kf(x)$			& $f(x)=ce^{kx}$					\\ \midrule
+$f'(x)+ af(x) =b$			& $f(x)=\frac{b}{a}+ce^{-ax}$		\\ \bottomrule  
+\end{tabular}
+\caption{Udvalgte fuldstændige løsninger.}
+\label{tab:Diffeq1}
+\end{table}
+
+\paragraph*{Eksempler:}
+\begin{enumerate}
+\item Bestem den fuldstændige løsning til differentialligningen $f'(x)=x^2$:
+
+Vi ser at det er en differentialligning på formen $f'(x)=h(x)$, hvor $h(x)=x^2$. Ved at bruge Tabel~\ref{tab:Diffeq1} ser vi at den fuldstændige løsning er givet ved
+\begin{align*}
+f(x) = \int h(x) \d x = \int x^2 \d x = \frac{1}{3}x^3+c.
+\end{align*}
+
+\item Bestem den fuldstændige løsning til differentialligningen $f'(x)-3f(x)=5$:
+
+Vi ser, at det er en differentialligning på formen $f'(x)+af(x)=b$ med $b=5$ og $a=-3$. Ved at benytte Tabel~\ref{tab:Diffeq1} ser vi, at den fuldstændige løsning er givet ved
+\begin{align*}
+f(x)=\frac{b}{a}+ce^{-ax} = \frac{5}{-3} +ce^{- (-3)x} = -\frac{5}{3}+ce^{3x}.
+\end{align*}
+\end{enumerate}

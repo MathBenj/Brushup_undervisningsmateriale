@@ -1,0 +1,146 @@
+\section{Vektorer i planen 1}
+\begin{enumerate}
+	\item Svarene er:
+	\begin{align*}
+	\begin{bmatrix}
+	6\\9
+	\end{bmatrix},&&\begin{bmatrix}
+	1\\-2
+	\end{bmatrix},&&\begin{bmatrix}
+	1\\5
+	\end{bmatrix},&&\begin{bmatrix}
+	3\\1
+	\end{bmatrix},&&\sqrt{13},&&\sqrt{5},&&4,&& 14.
+	\end{align*}
+	
+	\item Arealet er $19$.
+	
+	\item Svarene er:
+	\begin{enumerate}
+		\item $t=11$.
+		\item $t=1$ og $t=3$.
+	\end{enumerate}
+	
+	\item Vinklen er $\frac{\pi}{6}$.
+	
+	\item Svaret er:
+	\begin{align*}
+	\vec{u}=\frac{1}{2}\begin{bmatrix}
+	2\\5
+	\end{bmatrix}.
+	\end{align*}
+	
+	\item Svarene er:
+	\begin{align*}
+	13,&&\begin{bmatrix}
+	-6\\5
+	\end{bmatrix},&&-22,&&13,&&\frac{1}{5}\begin{bmatrix}
+	7\\-3
+	\end{bmatrix}
+	.
+	\end{align*}
+	
+	\item Arealet er $0$.
+	
+	\item Svarene er:
+	\begin{enumerate}
+		\item $t=4$ og $t=-1$.
+		\item $t=-6\pm 2\sqrt{10}$.
+	\end{enumerate}
+	
+	
+	\item Svaret er: Alle vektorer på formen
+	\begin{align*}
+	t\begin{bmatrix}
+	-1\\1
+	\end{bmatrix}
+	\end{align*}
+	hvor $t\in \R$.
+	
+	\item Vi har at
+	\begin{align*}
+	\vec{u}\c \hat{\vec{u}}=\begin{bmatrix}
+	u_1\\u_2
+	\end{bmatrix}\c \begin{bmatrix}
+	-u_2\\u_1
+	\end{bmatrix} =u_1(-u_2)+u_2u_2=0.
+	\end{align*}
+
+	
+	
+	\item\label{it:2dvec11ans} Bruger vi at $\cos(x)\in [-1,1]$ får vi at
+	\begin{align*}
+	(\vec{u}\c \vec{v})^2 =\norm{\vec{u}}^2\norm{\vec{v}}^2\cos^2(\theta)\leq \norm{\vec{u}}^2\norm{\vec{v}}^2.
+	\end{align*}
+	
+	\item\label{it:2dvec13ans} Svarene er:
+	\begin{figure}
+		\centering
+		\begin{tikzpicture}
+		\begin{axis}[xmin=-1,xmax=1,ymin=-1,ymax=1,axis x line=center,
+		axis y line=center, axis equal,xtick={-1,1},ytick={-1,1}]
+		%\addplot[blue,domain=0:2*pi,thick, samples=100] ({cos(deg(x))},{sin(deg(x))});
+		\addplot[domain=0:(sqrt(6)+sqrt(2))/4,thick,->] {(2-sqrt(3))*x};% \node[pos=0.7,below] {$\vec{v}$};
+		\addplot[domain=0:pi/12,samples=100,dotted] ({0.3*cos(deg(x))},{0.3*sin(deg(x))}) node[pos=0.5,right] {\tiny$\phi$};
+		
+		\addplot[domain=0:(sqrt(6)-sqrt(2))/4,thick,->] {1/(2-sqrt(3))*x};% \node[pos=0.7,left] {$\vec{u}$};
+		\addplot[domain=0:5*pi/12,samples=100,dotted] ({0.5*cos(deg(x))},{0.5*sin(deg(x))}) node[pos=0.5,right] {\tiny$\theta$};
+		\end{axis}
+		\end{tikzpicture}
+		\caption{Opgave~\ref{it:2dvec13ans}}
+		\label{fig:2dvec13ans}
+	\end{figure}
+		\begin{enumerate}
+			\item Figur~\ref{fig:2dvec13ans} viser at vinklen mellem $\vec{u}$ og $\vec{v}$ er $\theta-\phi$.
+			\item Da $\vec{u}$ og $\vec{v}$ begge har norm $1$ giver formlen for vinklen mellem vektorer at
+			\begin{align*}
+			\cos(\theta-\phi)=\vec{v}\c \vec{u}=\cos(\theta)\cos(\phi)+\sin(\theta)\sin(\phi).
+			\end{align*}
+			\item Bruger vi formlen for determinanten får vi at 
+			\begin{align*}
+			\sin(\theta-\phi)=\det(\vec{v},\vec{u})=\cos(\phi)\sin(\theta)-\sin(\phi)\cos(\theta).
+			\end{align*}
+			Bemærk at vi anvender $\det(\vec{v},\vec{u})$ da vinklen regnes fra $\vec{v}$ til $\vec{u}$.
+			
+		\end{enumerate}
+	
+	
+	\item\label{it:2dvec12ans} Det ses at
+	\begin{align*}
+	\vec{u}\c \vec{u}=u_1^2+u_2^2=\norm{\vec{u}}^2.
+	\end{align*}
+	Bruger vi dette får vi at 
+	\begin{align*}
+	\norm{\vec{u}+\vec{v}}^2&=(\vec{u}+\vec{v})\c (\vec{u}+\vec{v})= (u_1+v_1)(u_1+v_1)+(u_2+v_2)(u_2+v_2)\\&=u_1^2+v_1^2+2u_1v_1+u_2^2+v_2^2+2u_2v_2=\norm{\vec{u}}^2+\norm{\vec{v}}^2+2(\vec{u}\c \vec{v}).
+	\end{align*}
+	
+	\item Bruger vi Opgave~\ref{it:2dvec12} har vi at
+	\begin{align*}
+	\norm{\vec{u}+\vec{v}}^2=\norm{\vec{u}}^2+\norm{\vec{v}}^2+2(\vec{u}\c \vec{v}).
+	\end{align*}
+	Fra uligheden i Opgave~\ref{it:2dvec11} får vi at
+	\begin{align*}
+	(\vec{u}\c \vec{v}) \leq \abs{\vec{u}\c \vec{v}}\leq \norm{\vec{u}}\norm{\vec{v}}.
+	\end{align*}
+	Bruger vi denne ulighed i ligningen ovenfor får vi at
+	\begin{align*}
+	\norm{\vec{u}+\vec{v}}^2=\norm{\vec{u}}^2+\norm{\vec{v}}^2+2\norm{\vec{u}}\norm{\vec{v}}=(\norm{\vec{u}}+\norm{\vec{v}})^2.
+	\end{align*}
+	Ved at tage kvadratroden på begge sider får vi den ønskede ulighed. Denne kaldes typisk for trekantsuligheden.
+	
+	\item Vi har at
+	\begin{align*}
+	\norm{\frac{\vec{v}}{\norm{\vec{v}}}}=\sqrt{\frac{v_1^2}{\norm{\vec{v}}^2}+\frac{v_2^2}{\norm{\vec{v}}^2}}=\frac{1}{\norm{\vec{v}}}\sqrt{v_1^2+v_2^2}=\frac{\norm{\vec{v}}}{\norm{\vec{v}}}=1.
+	\end{align*}
+	
+
+	
+	\item Vi har at 
+	\begin{align*}
+	\vec{u}\c \vec{v}&=u_1v_1+u_2v_2=v_1u_1+v_2u_2=\vec{v}\c \vec{u},\\
+	-\det(\vec{v},\vec{u})&=-(v_1u_2-v_2u_1)=u_1v_2-u_2v_1=\det(\vec{u},\vec{v}),\\
+	 \norm{k\vec{u}}&=\sqrt{k^2u_1^2+k^2u_2^2}=\sqrt{k^2}\sqrt{u_1^2+u_2^2}=\abs{k}\norm{\vec{u}}.
+	\end{align*}
+	
+
+\end{enumerate}

@@ -1,0 +1,148 @@
+\subsection{Logaritme-og eksponentialfunktioner}
+Vi definerer logaritmen $\log_a \colon (0,\infty) \to \mathbb{R}$ ved
+\begin{align*}
+\log_a(x) = y \quad \textup{ hvis og kun hvis } \quad a^y=x,
+\end{align*}
+hvor $a>0$ kaldes for grundtallet af logaritme funktionen. Det skal forståes således at $\log_a(x)$ giver det tal, som $a$ skal opløftes i for at give $x$. Hvis grundtallet $a=e$, hvor $e$ er Eulers tal, så skriver vi $\ln(x)$ i stedet for $\log_e(x)$ og kalder det for den naturlige logaritme. Bemærk, at ud fra den måde vi definerede $\log_a(x)$ har vi, at
+\begin{align}\label{eq:funktioner4et}
+\log_a(a^y)=y \qquad \textup{ og } \qquad a^{\log_a(x)}=x.
+\end{align}
+
+\paragraph*{Eksempler:}
+\begin{enumerate}
+\item Udregn $\log_2(8)$:
+
+For at udregne $\log_2(8)$ skal vi finde et $y$ som opfylder at $2^y=8$, hvilket vi ser er $y=3$. Derfor har vi at $\log_2(8)=3$.
+\item Udregn $\log_{10}(10000)$:
+
+Vi ser at $10000=10^4$ hvilket medfører at $\log_{10}(10000)=4$.
+\item Udregn $\log_a(1)$:
+
+Vi har for alle $a$, at $a^0=1$, hvilket betyder, at $\log_a(1)=0$, lige meget hvad grundtallet $a$ er.
+\end{enumerate}
+
+\paragraph*{Regneregler:}
+Vi har følgende regneregler for logaritmefunktioner:
+\begin{enumerate}
+\item $\log_a(xy)=\log_a(x)+\log_a(y)$.
+\item $\log_a\big(\frac{x}{y}\big) = \log_a(x)-\log_a(y)$.
+\item $\log_a(x^r) = r\log_a(x)$.
+\end{enumerate}
+
+\paragraph*{Eksempler:}
+\begin{enumerate}
+\item Udregn $\log_2(16)$:
+
+Vi ser at 
+\begin{align*}
+\log_2(16)=\log_2(2 \cdot 8) = \log_2(2)+\log_2(8) = \log_2(2^1)+ \log_2(2^3) = 1+3 = 4.
+\end{align*}
+\item Udregn $\log_{10}(50)+\log_{10}(20)$:
+
+Vi kan ikke umiddelbart regne de to logaritmer, da vi ikke kan finde to pæne tal $x,y$, som opfylder at $10^x=50$ og $10^y=20$, men hvis vi bruger vores regneregler ser vi at
+\begin{align*}
+\log_{10}(50)+\log_{10}(20)=\log_{10}(50 \cdot 20) = \log_{10}(1000)=\log_{10}(10^3)=3.
+\end{align*}
+\end{enumerate}
+\paragraph*{Eksponentialfunktioner:}
+En funktion på formen 
+\begin{align*}
+f(x) = a^x,
+\end{align*}
+hvor $a >0$ kaldes for en eksponentialfunktion. Vi husker fra opgaveregningen at hvis $a > 1$ så er $f(x)$ en voksende funktion, hvis $a=1$ så er $f(x)$ en konstant funktion og hvis $0<a<1$ så er $f(x)$ en aftagende funktion.
+
+Hvis vi får givet et punkt $(x,y)$ kan vi, ligesom vi gjorde med førstegradspolynomier,  bestemme forskriften for den eksponentialfunktion der går gennem disse punkter. Det kan vi gøre ved at bruge formlen
+\begin{align*}
+a=\sqrt[x]{y}.
+\end{align*}
+En anden ting interessant ting man kan bestemme ud fra en eksponentialfunktion, såfremt denne er voksende, er dens fordoblingskonstant, som vi vil notere med $T_2$. Hvis vi har et punkt $(x_0,y_0)$, så fortæller fordoblingskontanten hvor langt ud af $x$-aksen vi skal gå fra $x_0$ for at vores tilhørende $y$-værdi, som startede i $y_0$, er blevet dobbelt så stor. Fordoblingskonstanten er givet ud fra formlen
+\begin{align*}
+T_2=\frac{\ln(2)}{\ln(a)}.
+\end{align*}
+
+
+\begin{figure}[!htbp]
+\begin{minipage}{0.49\textwidth}
+  \centering
+  \begin{tikzpicture}
+  \begin{axis}[ 
+  	width=0.8\textwidth,
+  	height=0.5\textwidth,
+    xmin=-3,
+    xmax=3,
+    ymin=-0.1,
+    ymax=5,
+%    axis equal,
+%    axis lines=center,
+	ticks=none]
+	restrict y to domain =0:5]
+	\addplot[thick,samples=300] {(2.5)^x};
+\end{axis}
+ \end{tikzpicture}
+  \caption{Voksende eksponentialfunktion.}
+  \label{fig:funktioner4et}
+\end{minipage}
+\begin{minipage}{0.49\textwidth}
+\centering
+  \begin{tikzpicture}
+  \begin{axis}[ 
+  	width=0.8\textwidth,
+  	height=0.5\textwidth,
+    xmin=-3,
+    xmax=3,
+    ymin=-0.1,
+    ymax=5,
+%    axis equal,
+%    axis lines=center,
+	ticks=none]
+	restrict y to domain =0.01:4.99]
+	\addplot[thick,samples=200,domain=-1.34:3]{(0.3)^x};
+\end{axis}
+ \end{tikzpicture}
+  \caption{Aftagende eksponentialfunktion.}
+  \label{fig:funktioner4to}
+\end{minipage}
+\end{figure}
+Hvis vores eksponential funktion derimod er aftagende, kan vi i stedet bestemme dens halveringskonstant, som vi vil notere med $T_{1/2}$. Halveringskonstanten er givet ved
+\begin{align*}
+T_{1/2} = \frac{\ln(\frac{1}{2})}{\ln(a)}.
+\end{align*}
+Når vi betragter fordoblings- og halveringskonstanter så er vi kun interesseret i hvordan funktionen voker/aftager. Det betyder, at en funktion givet ved $f(x)=ba^x$, har samme fordoblingskonstan/halveringskonstant som $f(x)=a^x$, da det at gange med en konstant ikke ændre noget ved hvordan funktionen vokser/aftager.
+
+
+Bemærk, at vi ud fra \eqref{eq:funktioner4et} kan se at logaritme funktionen med grundtal $a$ og eksponentialfunktionen med grundtal $a$ er hinandens inverse.
+
+\paragraph*{Eksempler:}
+\begin{enumerate}
+\item Bestem forskriften for den eksponentialfunktion der går gennem punktet $(4,16)$:
+
+Vi indsætter i vores formel og får
+\begin{align*}
+a= \sqrt[x]{y} = \sqrt[4]{16} = 2,
+\end{align*} 
+hvilket medfører at forskriften for eksponentialfunktionen er $f(x)=2^x$.
+\item Bestem fordoblingskonstanten for eksponentialfunktionen $f(x)=2^x$:
+
+Vi ser at $a=2$ og indsætter i formlen for fordoblingskonstanten
+\begin{align*}
+T_2=\frac{\ln(2)}{\ln(2)}=1,
+\end{align*}
+hvilket betyder at hver gang vi går en ud af $x$-aksen så fordobles vores $y$-værdi.
+\item Løs ligningen $\ln(2x)=\ln(2) +3$:
+
+Vi isolerer $x$ på venstre side ved at samle logaritmen og så bruge at $e^x$ er den inverse til $\ln(x)$:
+\begin{align*}
+\ln(2x)=\ln(2) + 3 &\Leftrightarrow \ln(2x)-\ln(2)=3 \\
+&\Leftrightarrow \ln\Big(\frac{2x}{2}\Big) = 3\\
+&\Leftrightarrow \ln(x)=3 \\
+&\Leftrightarrow e^{\ln(x)} = e^3 \\
+&\Leftrightarrow x=e^3.
+\end{align*}
+\end{enumerate}
+
+
+
+
+
+
+

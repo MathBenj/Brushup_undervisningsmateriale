@@ -1,0 +1,89 @@
+\subsection{Opgaver}
+
+\begin{enumerate}
+	\item Udregn følgende bestemte integraler
+	\begin{align*}
+	\int_1^2 x^2\dd x,&& \int_{-1}^0 x+3x^2\dd x,&& \int_1^2 \frac{1}{x} \dd x,&&\int_{-1}^1\sin x\dd x.
+	\end{align*}
+	
+	\item Bestem
+	\begin{align*}
+	\int_{\frac{\pi}{4}}^{\frac{\pi}{2}} \cos(x)\tan(x) \dd x.
+	\end{align*}
+	
+	\item Bestem arealet under grafen for funktionen $ f(x)=e^x $ i intervallet $ [1,3] $.
+	
+	\item Vis at det bestemte integral af den konstante funktion $f(x)=1$ over intervallet $[a,b]$ er lig intervallængden.
+	
+	\item Bestem arealet som afgrænses af funktionerne $f(x)=x^2$ og $g(x)=\sqrt{x}$ i intervallet $(0,1) $.
+	
+	\item Brug bestemte integraler til at vise at et rektangel med sidelængder $a$ og $b$ har areal $ab$.
+	
+	\item \label{it:best2} Vis at 
+	\begin{align*}
+	\int_a^b f(x)\dd x=\int_a^c f(x)\dd x+\int_c^b f(x)\dd x,
+	\end{align*}
+	for alle punkter $a,b,c\in \R$ og alle kontinuerte $f$. (Hint: Lad $F$ være en stamfunktion til $f$ og regn på højresiden af ovenstående lighed.) 
+	
+	\item Bestem arealet under kurven $f(x)=\abs{x}$ i intervallet $ [-2,1] $. (Hint: Anvend Opgave~\ref{it:best2} med $a=-2$, $b=1$ og $c=0$.)
+	
+
+	
+	\item \label{it:bes3} Vis at 
+	\begin{align*}
+	\int_{a}^{b} f(x)\dd x=-\int_{b}^{a} f(x) \dd x.
+	\end{align*}
+	(Hint: Regn på højresiden.)
+	
+	\item Bestem en værdi af $a$ således at 
+	\begin{align*}
+	\int_0^a\sin(x)\dd x=2
+	\end{align*}
+	
+	\item Bestem arealet under grafen for funktionen $f(x)=-\cos x$ i intervallet $ [\frac{\pi}{2},\frac{3\pi}{2}] $. 
+	
+
+	
+	\item Lad $k>0$ og definer $f(x)=x^k$ og $g(x)=x^{1/k}$.
+	\begin{enumerate}
+		\item Vis at arealet mellem graferne for $f$ og $g$ fra $0$ til $1$ er givet ved 
+		\begin{align*}
+		\frac{k-1}{k+1}.
+		\end{align*}
+		\item I \href{https://www.geogebra.org/m/csvbae28}{Geogebra} kan man se at hvis $k$ bliver meget stor så er arealet meget tæt på $1$. Hvad er den første værdi af $k$ hvor Geogebra siger at arealet er $1$?
+		\item Brug formlen til at vise, at arealet mellem de to kurver aldrig kan være $1$.
+		\item Hvad er det korrekte areal når $k=399$?
+		\end{enumerate}
+	
+	\item Lad 
+	\begin{align*}
+	f(x)=\begin{cases}
+	x^{\frac{2}{3}},& \textup{hvis } x<0,\\
+	x^{\frac{1}{3}},& \textup{hvis } x\geq 0,
+	\end{cases}
+	\end{align*}
+	Bestem arealet mellem grafen for $f$ og $x$-aksen i intervallet $ [-1,1] $.
+	
+	
+
+
+	\item Bestem arealet mellem graferne for funktionerne $f(x)=x^2$ og $g(x)=1-x^2$.
+	
+	\item\label{it:bes1} Hvilket af de to grå områder i Figur~\ref{fig:bes1} har det største areal? Hvad er det samlede areal af begge grå områder?
+			\begin{figure}
+		\centering
+		\begin{tikzpicture}
+		\begin{axis}[axis x line=center,xmin=-0.1,xmax=2.6,ymin=-0.1,ymax=5.1,axis y line=center]
+		\addplot[domain=-1:3,name path=A,thick,blue, samples = 600] {(x-2)^2+1} node[above right=5pt,pos=0.75] {\small$x^2-4x+5$};
+		\addplot[domain=-1:1.5,name path=B,thick,red, samples = 600] {-4*x+5} node[left,pos=0.75] {\small$-4x+5$};
+		\addplot[domain=1:3,name path=C,thick,red, samples = 600] {x-5/4} node[right,below,pos=0.6] {\small$x-\frac{5}{4}$};
+		\addplot[gray!50] fill between[of=A and B,soft clip={domain=0:5/4}];
+		\addplot[gray!25] fill between[of=A and C,soft clip={domain=5/4:5/2}];
+		\end{axis}
+		\end{tikzpicture}
+		\caption{Opgave~\ref{it:bes1}}
+		\label{fig:bes1}
+	\end{figure}
+	
+	
+\end{enumerate}

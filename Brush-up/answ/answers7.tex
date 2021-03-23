@@ -1,0 +1,124 @@
+\newpage
+\section{Funktioner}
+\begin{enumerate}
+	\item  Svarene kunne være:
+	\begin{enumerate}
+		\item En mulighed er $ f(1)=3,f(2)=5,f(3)=\pi,f(4)=1,f(5)=-1 $, men der er 119 andre rigtige svar..
+		\item En mulighed kunne være $f(x)=\pi$ for alle $x\in A$.
+	\end{enumerate}
+	
+	
+	\item En cirkel kan ikke beskrives som grafen for en funktion da denne funktion i såfald ville have $x$-værdier som skulle sendes i to $y$-værdier. Man kan dog beskrive enhver cirkel ved hjælp at to funktioner, en øvre og nedre halvcirkel, givet ved $y=b\pm \sqrt{r^2-(x-a)^2}$. 
+	
+	\item Svarene er:
+	\begin{enumerate}
+		\item $f$ er en funktion som er surjektiv men ikke injektiv.
+		\item $g$ er en funktion som er injektiv men ikke surjektiv.
+		\item $h$ er ikke en funktion da $h(4)=\textup{Hest},\textup{Hund}$.
+	\end{enumerate}
+
+	\item Svarene er:
+	\begin{enumerate}
+		\item $(f+g)(2)=\frac{10}{3}$
+		\item $ \frac{f}{g}(-2) =-3$
+		\item $(fg)(0)=-1$
+		\item $\frac{g}{f}(x)=\frac{1}{x^3+x^2-x-1}$
+		\item $(g-f)(x)=\frac{-x^3-x^2+x+2}{1+x}$.
+	\end{enumerate}
+
+	\item Værdimængden for funktionen $f\colon \mathbb{R}\to \mathbb{R}$ givet ved $f(x)=-3x^2+9$ er $f(\mathbb{R})=]-\infty,9]$.
+	
+	\item \label{it:fun1} Svarene er:
+	\begin{enumerate}
+		\item Blå: Surjektiv men ikke injektiv.
+		\item Rød: Hverken injektiv eller surjektiv.
+		\item Grøn: Injektiv og surjektiv.
+		\item Sort: Injektiv men ikke surjektiv.
+	\end{enumerate}
+%	\begin{figure}
+%		\centering
+%	\begin{tikzpicture}
+%\begin{axis}[xmin=-2.1,xmax=2.1,ymin=-2.1,ymax=2.1,axis x line=center,
+%axis y line=center, restrict y to domain=-2:2]
+%\addplot[thick,blue,samples =300] {-x^2+2};
+%\addplot[thick,red,samples=100] {(1+x^2)^-1};
+%\addplot[thick,green, samples =200] {x };
+%\addplot[thick, black,samples=200] { e^-x -3/2};
+%\end{axis}
+%	\end{tikzpicture}
+%	\caption{Opgave~\ref{it:fun1}.}
+%	\label{fig:fun1}
+%	\end{figure}
+
+	\item Så længe $D\subset [0,\infty[$ eller $D\subset ]-\infty,0]$ vil $f$ være injektiv.
+	
+	\item \label{it:fun2} Funktionen $f$ er injektiv da 
+	\begin{align*}
+	\frac{1}{x}=\frac{1}{y}\quad\Leftrightarrow\quad y=x.
+	\end{align*}
+	Den er ikke surjektiv da $f(x)\neq 0$ for alle $x\in \R\neq \{0\}$, dog er alle andre punkter med i værdimængden for $f$. Derfor bliver $f$ bijektiv hvis domænet ændres til $\R\setminus\{0\}$.
+	
+%	\begin{figure}
+%		\centering
+%		\begin{tikzpicture}
+%		\begin{axis}[xmin=-5,xmax=5,ymin=-20,ymax=20,axis x line=center,
+%		axis y line=center, restrict y to domain=-50:50]
+%		\addplot[thick,blue,samples=400] {1/x};
+%		\end{axis}
+%		\end{tikzpicture}
+%		\caption{Opgave~\ref{it:fun2}.}
+%		\label{fig:fun2}
+%	\end{figure}
+
+	\item Når $a$ er ulige er $f$ bijektiv og når $a$ er lige er $f$ hverken injektiv eller surjektiv.
+	
+	\item Svarene er:
+	\begin{align*}
+	D(f)=[-1,2],&& D(g)=\R,&& D(h)=]-2,\infty[.
+	\end{align*}
+	
+	\item \label{it:fun3} Kun den røde kurve i Figur~\ref{fig:fun3} er grafen for en funktion.
+	
+ 	% \begin{figure}
+	% 	\centering
+	% 	\begin{tikzpicture}[
+	% 	%declare function={func(\x)= (\x<-3)*(-2)+ and (\x>=-3,\x<=-1)*(sqrt(1-(x+2)^2)-2)+ and (\x>-1)*(-2); }
+	% 	declare function={
+	% 		func(\x)= (\x < -3) * (-2)   +
+	% 		and(x >= -3,\x<=-1) * (sqrt(1-(x+2)^2)-2)     +
+	% 		and(x >= -1,\x<=1) * (-sqrt(1-(x)^2)-2)     +
+	% 		and(x >= 1,\x<=3) * (sqrt(1-(x-2)^2)-2)     +
+	% 		(\x>3) * (-2)
+	% 		;
+	% 		}
+	% 	]
+	% 	\begin{axis}[xmin=-5,xmax=5,ymin=-5,ymax=5,axis x line=center,
+	% axis y line=center, restrict y to domain =-5:5]
+	% 	\addplot[data cs=polar, thick,blue,samples=200, domain= 0:180] ({x}, {3*sin(x)*cos(x)/(sin(x)^3+cos(x)^3)});
+	% 	\addplot[thick,red,samples=400] {func(x)};
+	% 	\addplot[data cs=polar, thick,green,samples=200, domain= 0:180] ({x}, {sec(x)+2*cos(x)});
+	% 	\end{axis}
+	% 	\end{tikzpicture}
+	% 	\caption{Opgave~\ref{it:fun3}.}
+	% 	\label{fig:fun3}
+	% \end{figure}
+
+	\item\label{it:exercisetegning} I Figur~\ref{fig:fun35} ses et eksempel på en sådan funktion.
+	\begin{figure}
+		\centering
+		\begin{tikzpicture}
+		\begin{axis}[xmin=-2,xmax=4,ymin=-2.1,ymax=4,axis x line=center,
+		axis y line=center, restrict y to domain =-5:5]
+		\addplot[blue,thick,domain=-2:-1] {3};
+		\addplot[blue,thick,domain=-1:4] {-2};
+	\node[fill, circle, inner sep=1pt] at (axis cs:-1,3) {};
+	\node[circle,inner sep=1pt,draw=black,fill=white] at (axis cs:-1,-2) {};
+		\end{axis}
+		\end{tikzpicture}
+		\caption{Opgave~\ref{it:exercisetegning}.}
+		\label{fig:fun35}
+	\end{figure}
+	
+	
+	\item Uanset værdien af $a\in \{-3-2,\dots,2,3\}$ vil kurven aldrig være grafen for en funktion.
+\end{enumerate}

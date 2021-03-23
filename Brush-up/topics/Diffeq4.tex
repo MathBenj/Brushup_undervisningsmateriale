@@ -1,0 +1,82 @@
+\section{Inhomogene førsteordens differentialligninger}
+\noindent Sidste gang betragtede vi homogene første ordens differentialligninger (hvor højresiden var lig $0$) nu vil vi i stedet studere inhomogone lineære første ordens differentialligninger.
+
+En inhomogen lineær førsteordens differentialligning med variable koefficienter er på formen 
+\begin{align*}
+f'(x) + a(x)f(x)=b(x).
+\end{align*}
+Inhomogen betyder at højresiden er forskelig fra $0$, førsteordens betyder, at der kun indgår en første afledede af $f$ og variable koefficienter betyder, at funktionerne $a$ og $b$ kan varierer, når $x$ varierer (i modsætning til konstante koefficienter hvor $a(x)=k_1$ og $b=k_2$).
+
+En sådan ligning har den fuldstændige løsning 
+\begin{align}\label{eq:diffeq4et}
+f(x)=e^{-A(x)} \int b(x) e^{A(x)} \d x + ce^{-A(x)}.
+\end{align}
+hvor $A(x)$ er en vilkårlig stamfunktionen til $a$ (ofte valgt med konstant lig $0$). Formlen for den fuldstændige løsning kaldes ofte for Panzerformlen.
+
+Bemærk, at hvis $b(x)=0$, så vi i stedet har en homogen første ordens differentialligning, så vil den fuldstændige løsning reducere til 
+\begin{align*}
+f(x)=ce^{-A(x)},
+\end{align*}
+som vi genkender fra sidste gang.
+
+\paragraph*{Eksempler:}
+\begin{enumerate}
+\item Bestem den fuldstændige løsning til differentialligningen $f'(x) + 6xf(x) = 18x$:
+
+Vi ser, at det er en differentialligning på formen $f'(x)+a(x)f(x)=b(x)$, hvor $a(x)=6x$ og $b(x)=18x$. Vi har fra \eqref{eq:diffeq4et} at den fuldstændige løsning er givet ved
+\begin{align*}
+f(x)=e^{-A(x)} \int b(x) e^{A(x)} \d x + ce^{-A(x)}.
+\end{align*}
+Vi finder først en stamfunktion til $a$
+\begin{align*}
+A(x) = \int a(x) \d x = \int 6x \d x = 3x^2 + c,
+\end{align*}
+hvor vi vælger $c=0$. Det giver, at den fuldstændige løsning er
+\begin{align*}
+f(x)&=e^{-3x^2} \int 18xe^{3x^2} \d x + ce^{-3x^2}.
+\end{align*}
+Vi udregner integralet ved hjælp af substitution, sæt $u=3x^2$, så har vi at $ \frac{du}{dx} = 6x$ og $\frac{1}{6x}du = dx$, hvilket giver
+\begin{align*}
+f(x)&=e^{-3x^2} \int 18xe^{3x^2} \d x + ce^{-3x^2} \\
+&=e^{-3x^2} \int 18xe^{u} \frac{1}{6x}\d u + ce^{-3x^2} \\
+&=e^{-3x^2} \int 3e^{u} \d u + ce^{-3x^2} \\
+&=e^{-3x^2}  3e^{3x^2} + ce^{-3x^2} \\
+&=3+ce^{-3x^2}.
+\end{align*}
+\item Løs begyndelsesværdiproblemet $x f'(x) + 2f(x) = 3x$ med $f(1)=5$:
+
+Vi ser først at vores differentialligning ikke er på formen $f'(x)+a(x)f(x)=b(x)$, men hvis vi dividere igennem med $x$ på begge sider, får vi
+\begin{align*}
+\frac{x f'(x) + 2f(x)}{x} = \frac{3x}{x} \Leftrightarrow f'(x) + \frac{2}{x}f(x) = 3,
+\end{align*}
+som er på formen $f'(x)+a(x)f(x)=b(x)$ med $a(x)=\frac{2}{x}$ og $b(x)=3$. Vi har igen, at den fuldstændige løsning er på formen 
+\begin{align*}
+f(x)=e^{-A(x)} \int b(x) e^{A(x)} \d x + ce^{-A(x)}.
+\end{align*}
+Vi starter med at bestemme $A(x)$
+\begin{align*}
+A(x) = \int a(x) \d x = 2\int \frac{1}{x} \d x =2 \ln x + c, 
+\end{align*}
+hvor vi vælger $c=0$. Hvis vi indsætter det i den fuldstændige løsning, får vi
+\begin{align*}
+f(x)&=3e^{-2\ln x} \int e^{2\ln x} \d x + ce^{-2\ln x} \\
+&=3(e^{\ln x})^{-2} \int (e^{\ln x})^2 \d x + c(e^{\ln x})^{-2} \\
+&=3x^{-2} \int x^2 \d x + cx^{-2} \\
+&= 3x^{-2} \frac{1}{3}x^3 + cx^{-2} \\
+&= x + cx^{-2}
+\end{align*}
+Vi bestemmer så $c$ ved at benytte vores begyndelsesbetingelse
+\begin{align*}
+5=f(1) = 1+c 1^{-2} = 1+c \Leftrightarrow c=4.
+\end{align*}
+Hvilket betyder at løsningen til vores begyndelsesværdiproblem er 
+\begin{align*}
+f(x)=x+4x^{-2}.
+\end{align*}
+\end{enumerate}
+
+
+
+
+
+

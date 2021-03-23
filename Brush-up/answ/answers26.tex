@@ -1,0 +1,98 @@
+\section{Differentialligninger 4}
+\begin{enumerate}
+	
+	
+	
+	\item Svaret er:
+	\begin{align*}
+	y(x)=ce^{-x}+x-1.
+	\end{align*}
+
+	
+	\item Svarene er:
+	\begin{enumerate}
+		\item $y_h(x)=ce^{-x}$.
+		\item Vi har at $y_p'(x)=-a\sin(x)+b\cos(x)$ og indsætter vi dette i ligningen fås
+		\begin{align*}
+		-a\sin(x)+b\cos(x)+a\cos(x)+b\sin(x)=\sin(x).
+		\end{align*} 
+		Ud fra denne ligning ser vi at $a=-b$ og $-a+b=1$. Disse to ligninger har løsningen $a=-\frac{1}{2}$ og $b=\frac{1}{2}$.
+		
+		\item Vi har at 
+		\begin{align*}
+		y(x)=e{-x}\int \sin(x)e^x\dd x+ce^{-x}=\frac{1}{2}(\sin(x)-\cos(x))+ce^{-x}.
+		\end{align*}
+		Dette er præcis den samme funktion som $y_h+y_p$. 
+	\end{enumerate}
+
+	\item Svaret er:
+	\begin{align*}
+	y(x)=ce^{2x} -\frac{1}{4}(2x^2+2x+1).
+	\end{align*}
+
+	
+	\item At der ikke er noget $y$ led i differentialligningen svarer til at $k=0$. Indsættes det i løsningsformlen får vi
+	\begin{align*}
+	y(x)=\int q(x)\dd x+ c,
+	\end{align*}
+	Hvilket viser at løsningen fås ved at integrere begge sider.
+	
+	
+	
+	\item I Opgave~\ref{it:diffeq31} så vi at $A(t)=3e^{-4t}$. Indsættes dette i differentialligningen for $B$ fås
+	\begin{align*}
+	B'=4(3e^{-4t})-2B.
+	\end{align*}
+	Bruger vi Panzerformlen får vi at
+	\begin{align*}
+	B(t)=e^{-2t} \int 12e^{-4t}e^{2t}\dd t +ce^{-2t}=-6e^{-4t}+ ce^{-2t}
+	\end{align*}
+	Begyndelsesbetingelsen $B(0)=0$ giver at $c=6$ så $B(t)=6(e^{-2t}-e^{-4t})$. Ved at anvende de sædvanlige optimeringsmetoder ses at $B$ har et globalt maksimum når $t=\ln(\sqrt{2})$ og at $B(\ln(\sqrt{2}))=\frac{3}{2}$ og at $A(t)=\frac{3}{4}$.
+	
+	\item Svaret er:
+	\begin{align*}
+	y(x)=ce^{-x}+ \ln(x).
+	\end{align*}
+		
+	
+	\item Svarene er:
+	\begin{enumerate}
+		\item Funktionen $f$ skal opfylde differentialligningen
+		\begin{align*}
+		f'(x)=p(x)f(x)
+		\end{align*}
+		
+		\item Svaret er: $f(x)=e^{-P(x)}$.
+		
+		\item Ved at gange differentialligningen igennem med $f(x)=e^{-P(x)}$ og bruge at $f'=pf$ så får vi at
+		\begin{align*}
+		e^{P(x)}y'(x)+p(x)e^{P(x)}y(x)=q(x)e^{P(x)},
+		\end{align*}
+		hvilket vi ved hjælp af produktreglen omskriver til
+		\begin{align*}
+		\frac{d}{dx} \Big(y(x) e^{P(x)} \Big)=e^{P(x)}q(x).
+		\end{align*}
+		Integrerer vi begge sider af ligningen ovenfor fås
+		\begin{align*}
+		e^{P(x)}y(x)=\int q(x)e^{P(x)}\dd x+c
+		\end{align*}
+		og dividerer vi med $e^{P(x)}$ får vi at
+		\begin{align*}
+		y(x)=e^{-P(x)}\int q(x)e^{P(x)}\dd x+ce^{-P(x)}
+		\end{align*}
+
+	\end{enumerate}
+	
+	\item Svaret er
+	\begin{align*}
+	y(x)=e^{2\ln(x)}\int\frac{-8}{x}e^{-2\ln(x)}\dd x+ce^{2\ln(x)}=x^2(4x^{-2})+cx^2=4+cx^2
+	\end{align*}
+	
+	\item Svaret er:
+	\begin{align*}
+	y(x)=\frac{c}{x}-\frac{x}{4}+\frac{1}{2}x\ln(x).
+	\end{align*}
+	
+	
+	
+\end{enumerate}

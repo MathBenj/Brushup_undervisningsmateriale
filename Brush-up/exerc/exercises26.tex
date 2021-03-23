@@ -1,0 +1,96 @@
+\subsection{Opgaver}
+\begin{enumerate}
+	
+	
+	
+	\item Bestem den fuldstændige løsning til differentialligningen 
+	\begin{align*}
+	\frac{dy}{dx}+y=x.
+	\end{align*}
+	(Hint: Brug Opgave~\ref{it:int21}).
+	
+	\item Betragt ligningen 
+	\begin{align}\label{eq:diffeq41}
+	y'+y=\sin(x).
+	\end{align}
+	\begin{enumerate}
+		\item Bestem den fuldstændige løsning $y_h$ til den homogene ligning
+		\begin{align*}
+		y'+y=0.
+		\end{align*}
+		\item Bestem $a$ og $b$ så $y_p(x)=a\cos(x)+b\sin(x)$ bliver en partikulær løsning til~\eqref{eq:diffeq41}. 
+		\item Brug løsningsformlen for inhomogene førsteordens differentialligninger til at løse ligningen. Hvad er forskellen på denne løsning og $y_h+y_p$. (Hint: Brug Opgave~\ref{it:int22}.)
+	\end{enumerate}
+
+	\item Bestem den fuldstændige løsning til differentialligningen 
+	\begin{align*}
+	y'-2y=x^2.
+	\end{align*}
+	(Hint: Opgave~\ref{it:int21}.)
+	
+	\item Den generelle løsningsformel for en inhomogen førsteordens differentialligning med konstante koefficienter
+	\begin{align*}
+	y'+ky=q(x),
+	\end{align*}
+	er givet ved
+	\begin{align*}
+	y(x)=e^{-kx}\int q(x)e^{kx}\dd x+ ce^{-kx}.
+	\end{align*}
+	Brug dette til at bestemme en formel for løsningen af en inhomogen førsteordens differentialligning som ikke indeholder et $y$ afhængigt led.
+	
+	
+	
+	\item Antag at det radioaktive materiale fra Opgave~\ref{it:diffeq31}, med mængde beskrevet ved $A(t)$, henfalder til et andet radioaktivt materiale, med mængde beskrevet ved $B(t)$. Dette radioaktive materiale henfalder også med en hastighed der er proportionel med mængden $B(t)$. Det betyder at den aflede af $B$ både afhænger af $A$ og $B$. Vi har dermed ligningen
+	\begin{align*}
+	B'=k_1 A-k_2 B.
+	\end{align*} 
+	Løs ligningen når $k_1=4$, $k_2=2$, $A(0)=3$ og $B(0)=0$. (Hint: Brug formlen for $A(t)$ fundet i Opgave~\ref{it:diffeq31}). Hvad er den største værdi af $B(t)$ og hvor stor er $A(t)$ på det tidspunkt?
+	
+	\item Bestem den fuldstændige løsning til differentialligningen
+	\begin{align*}
+	y'+y=\frac{1}{x}+\ln x.
+	\end{align*}
+	(Hint:Opgave~\ref{it:int23})
+	
+	
+	\item Vi vil gerne finde en generel formel til at løse differentialligninger på formen
+	\begin{align}\label{eq:diffeq2}
+	y'+p(x)y=q(x),
+	\end{align}
+	hvor $p$ og $q$ er kontinuerte funktioner. En måde at gøre dette på er at anvende produktreglen for differentiation:
+	\begin{align}\label{eq:diffeq4}
+	(yf)'(x)=y'(x)f(x)+y(x)f'(x).
+	\end{align}
+	\begin{enumerate}
+		\item Ved at gange~\eqref{eq:diffeq2} igennem med $f(x)$ får vi at
+		\begin{align}\label{eq:diffeq3}
+		y'(x)f(x)+p(x)f(x)y(x)=f(x)q(x).
+		\end{align}
+		Hvilken differentialligning skal $f$ opfylde for at vi kan anvende produktreglen? (Hint: sammenlign højresiden af~\eqref{eq:diffeq4} med venstresiden af~\eqref{eq:diffeq3})
+		
+		\item Brug Opgave~\ref{it:diffeq12} til at finde en løsning til differentialligning vi bestemte i del (a). 
+		
+		\item Redegør for at vi kan omskrive~\eqref{eq:diffeq2} til
+		\begin{align*}
+		\frac{d}{dx} \Big(y(x) e^{P(x)} \Big)=e^{P(x)}q(x),
+		\end{align*}
+		hvor $P$ er en stamfunktion til $p$. Brug dette til at bestemme den generelle løsning til~\eqref{eq:diffeq2}. (Hint: Ved at integrere begge sider af ligningen ovenfor får vi at
+		\begin{align*}
+		y(x)e^{P(x)}=\int q(x)e^{P(x)}\dd x+c,
+		\end{align*}
+		hvorefter vi kan isolere for $y$.
+	\end{enumerate}
+	
+	\item Bestem den fuldstændige løsning til
+	\begin{align*}
+	xy'=2(y-4).
+	\end{align*}
+	
+	\item Bestem den fuldstændige løsning til 
+	\begin{align*}
+	y'+\frac{y}{x}=\ln(x).
+	\end{align*}
+	(Hint: Brug første delopgave i Opgave~\ref{it:int23}.)
+	
+	
+\end{enumerate}

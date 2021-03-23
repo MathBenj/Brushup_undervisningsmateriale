@@ -1,0 +1,91 @@
+\newpage
+\section{Ubestemte integraler 3}
+
+\begin{enumerate}
+	\item Svarene er:
+	\begin{align*}
+	-\frac{1}{3}\cos(3x+1)+c,&& -\frac{1}{2} \sin(-2x+1)+c, && \frac{1}{5}e^{5x-3}+c.
+	\end{align*}
+	
+	\item Svarene er
+	\begin{align*}
+	\ln(x^3+x-1)+c,&& \frac{1}{6}(x+1)^6+c,&& \frac{1}{4}(\frac{1}{2}x^4-x+12)^4+c.
+	\end{align*}
+	
+		
+	\item Svarene er:
+	\begin{align*}
+	\frac{1}{2}e^{x^2}+c, && (x+1)\ln(x+1)-(x+1)+c,&& -\cos(x^2-1)+c.
+	\end{align*}
+	
+
+	
+	\item Svarene er:
+	\begin{align*}
+	&\int \cos(x)\sin(x) \dd x=\frac{1}{2}\int \sin(2x)\dd x=-\frac{1}{4}\cos(2x)+c.\\
+	&\int \sin^3(x)\cos(x) \dd x=\frac{1}{4}\sin^4(x)+c.\\	
+	&\int (3x^2-1)\cos(x^3-x+2) \dd x= \sin(x^3-x+2)+c.
+	\end{align*}
+	
+	\item Lad $a$ og $b$ være reelle tal. Bestem stamfunktioner til funktionerne
+	\begin{align*}
+	-\frac{1}{a} \cos(ax+b),&& \frac{1}{a}\sin(ax+b),&& \frac{1}{a}e^{ax+b},&&\frac{1}{a}((ax+b)\ln(ax+b)-(ax+b)) +c.
+	\end{align*}
+	
+	\item Svaret er:
+	\begin{align*}
+	\int \frac{e^{\sqrt{x}}}{\sqrt{x}} \dd x=2e^{\sqrt{x}}+c.
+	\end{align*}
+
+
+	\item Vi har at 
+	\begin{align*}
+	\frac{d}{dx}(F(g(h(x))) +C)=F'(g(h(x)))g'(h(x))h'(x)=f(g(h(x))g'(h(x))h'(x).
+	\end{align*}
+	
+	
+	\item Lad os først bruge integration ved substitution til at udregne
+	\begin{align*}
+	\int (x+1)^a\dd x,
+	\end{align*}
+	for $a\neq -1$.
+	Substituerer vi $u=x+1$ får vi at $du=dx$ og
+	\begin{align*}
+	\int (x+1)^a\dd x\int u^a\dd u =\frac{1}{a+1}u^{a+1}=\frac{1}{a+1}(x+1)^{a+1}.
+	\end{align*}
+	Ved at bruge denne mellemregning for $a=\frac{1}{2}$ og $a=\frac{3}{2}$ får vi at
+	\begin{align*}
+	\int x\sqrt{x+1}\dd x&=\frac{2}{3}x(x+1)^{\frac{3}{2}}-\frac{2}{3}\int(x+1)^{\frac{3}{2}}\dd x\\
+	&=\frac{2}{3}x(x+1)^{\frac{3}{2}}-\frac{2}{3}\frac{2}{5} (x+1)^{\frac{5}{2}}+C\\
+	&=\frac{2}{3}x(1+x)^{\frac{3}{2}}-\frac{4}{15}(1+x)^{\frac{5}{2}}+C.
+	\end{align*}
+	For at udregne
+	\begin{align*}
+	\int \sqrt{1+\sqrt{x}} \dd x
+	\end{align*}
+	substituerer vi $u=\sqrt{x}$ og får
+	\begin{align*}
+	\frac{du}{dx}=\frac{1}{2\sqrt{x}}\quad\Leftrightarrow\quad 2\sqrt{x}du=dx\quad\Leftrightarrow\quad 2udu=dx.
+	\end{align*} 
+	Dette giver at
+	\begin{align*}
+	\int \sqrt{1+\sqrt{x}} \dd x&=2\int u\sqrt{1+u}\dd u\\
+	&=\frac{4}{3}u(1+u)^{\frac{3}{2}}-\frac{8}{15}(1+u)^{\frac{5}{2}}+C\\
+	&=\frac{4}{3}\sqrt{x}(1+\sqrt{x})^{\frac{3}{2}}-\frac{8}{15}(1+\sqrt{x})^{\frac{5}{2}}+C.
+	\end{align*}
+	Bemærk at begge facit kan reduceres yderligere.
+	
+	\item Ved at substituere $u=x^2$ får vi at $\frac{1}{2x}du=dx$, hvilket giver
+	\begin{align*}
+	\int x^3\sin(x^2)\dd x&=\frac{1}{2}\int u\sin(u)\dd u=\frac{1}{2}(\sin(u)-u\cos(u))+c\\&=\frac{1}{2}(\sin(x^2)-x^2\cos(x^2))+c.
+	\end{align*} 
+	Ved at substituere $u=\sqrt{x}$ får vi at $2u du=dx$, hvilket giver
+	\begin{align*}
+	\int e^{-\sqrt{x}} \dd x&=2\int ue^{-u}\dd u=-2(1+u)e^{-u}+c\\&=-2(1+\sqrt{x})e^{-\sqrt{x}}+c.
+	\end{align*}
+	
+	\item Da $\tan x=\frac{\sin x}{\cos x}$ kan vi substituere $u=\cos(x)$ og få at $\frac{du}{-\sin(x)}=dx$, hvilket giver
+	\begin{align*}
+	\int \tan x\dd x=\int \frac{\sin x}{\cos x}\dd x=-\int \frac{1}{u} \dd u=-\ln(u)+c=-\ln(\cos(x))+c.
+	\end{align*}
+\end{enumerate}
