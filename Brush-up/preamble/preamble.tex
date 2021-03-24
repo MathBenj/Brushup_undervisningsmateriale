@@ -1,7 +1,7 @@
 %%%
 %%% Preamble
 %%% 
-\documentclass[12pt,onesided,a4paper,reqno]{book}  %%
+\documentclass[12pt,oneside,a4paper,reqno]{book}  %%
 %% Usual stuff
 %%
 \usepackage[utf8]{inputenc}
@@ -21,7 +21,7 @@
 	bookmarksnumbered=true,%
 	pdfstartview=FitH%
 }
-\usepackage[a4paper, total={6in, 10in}]{geometry}
+\usepackage[a4paper,left=1in,right=1in,top=1in,bottom=1in,footskip=.25in]{geometry}
 \usepackage{lscape}
 
 %%
@@ -36,18 +36,17 @@
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{microtype}
+\usepackage{titlesec}
 
-\fancyhead[RE]{\small\nouppercase\leftmark} %even page - chapter title
-\fancyhead[LO]{\small\nouppercase\rightmark} %uneven page - section title
-% \fancyhead[LE,RO]{\thepage}
-% \lhead{Benjamin Støttrup \& Kasper Sørensen}
-% \chead{}
-% \rhead{}
-% \lfoot{}
-% \cfoot{Side \thepage\ af \pageref{LastPage}}
-% \rfoot{}
+\titleformat{\chapter}[block]
+  {\normalfont\huge\bfseries}{\thechapter.}{1em}{\Huge}
+\titlespacing*{\chapter}{0pt}{-19pt}{0pt}
 
-%\setlength\parindent{0pt}
+
+\fancyhead[R]{\thepage} %even page - chapter title
+\fancyhead[L]{\small\nouppercase\rightmark} %uneven page - section title
+\fancyfoot{}
+
 
 \usepackage{tikz}
 \usepackage{pgfplots}
