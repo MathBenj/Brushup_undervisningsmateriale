@@ -121,10 +121,10 @@
 	\begin{figure}
 		\centering
 		
-		\begin{minipage}{0.3\linewidth}
+		\begin{minipage}{0.3\linewidth}		
 			\begin{tikzpicture}[scale=0.5]
 			\begin{axis}[xmin=-2,xmax=2,ymin=-2,ymax=2,axis x line=center,
-			axis y line=center,ticks=none]
+			axis y line=center,ticks=none,xlabel={},ylabel={}]
 			\addplot[thick,blue, samples = 600] {e^(-x^2)};
 			\end{axis}
 			\end{tikzpicture}
@@ -132,7 +132,7 @@
 		\begin{minipage}{0.3\linewidth}
 			\begin{tikzpicture}[scale=0.5]
 			\begin{axis}[xmin=-2,xmax=2,ymin=-2,ymax=2,axis x line=center,
-			axis y line=center,ticks=none,restrict y to domain=-2:2]
+			axis y line=center,ticks=none,restrict y to domain=-2:2,xlabel={},ylabel={}]
 			\addplot[thick,blue, samples = 700]  {sin(deg(x))*(x^2)^(1/3)};
 			\end{axis}
 			\end{tikzpicture}
@@ -140,7 +140,7 @@
 		\begin{minipage}{0.3\linewidth}
 			\begin{tikzpicture}[scale=0.5]
 			\begin{axis}[xmin=-2,xmax=2,ymin=-2,ymax=2,axis x line=center,
-			axis y line=center,ticks=none, restrict y to domain=-2:2]
+			axis y line=center,ticks=none, restrict y to domain=-2:2,xlabel={},ylabel={}]
 			\addplot[thick,blue, samples = 600] {-ln(cos(deg(sin(2*deg(x))^2)))};
 			\end{axis}
 			\end{tikzpicture}
@@ -149,7 +149,7 @@
 		\begin{minipage}{0.3\linewidth}
 			\begin{tikzpicture}[scale=0.5]
 			\begin{axis}[xmin=-2,xmax=2,ymin=-2,ymax=2,axis x line=center,
-			axis y line=center,ticks=none]
+			axis y line=center,ticks=none,xlabel={},ylabel={}]
 			\addplot[thick,red, samples = 600] {-2*x*e^(-x^2)};<
 			\end{axis}
 			\end{tikzpicture}
@@ -157,7 +157,7 @@
 		\begin{minipage}{0.3\linewidth}
 			\begin{tikzpicture}[scale=0.5]
 			\begin{axis}[xmin=-2,xmax=2,ymin=-2,ymax=2,axis x line=center,
-			axis y line=center,ticks=none]
+			axis y line=center,ticks=none,xlabel={},ylabel={}]
 			\addplot[domain=-2:2,thick,red, samples = 600] {4*sin(2*deg(x))*cos(2*deg(x))*tan(deg(sin(2*deg(x))^2))};
 			\end{axis}
 			\end{tikzpicture}
@@ -165,7 +165,7 @@
 		\begin{minipage}{0.3\linewidth}
 			\begin{tikzpicture}[scale=0.5]
 			\begin{axis}[xmin=-2,xmax=2,ymin=-2,ymax=2,axis x line=center,
-			axis y line=center,ticks=none]
+			axis y line=center,ticks=none,xlabel={},ylabel={}]
 			\addplot[thick,red, samples = 600] {x*(2*sin(deg(x))+3*x*cos(deg(x)))/(3*((x^2)^2)^(1/3))};					
 			\end{axis}
 			\end{tikzpicture}

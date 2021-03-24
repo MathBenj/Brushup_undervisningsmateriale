@@ -5,8 +5,6 @@
 \usetikzlibrary{shapes,positioning,arrows,fit,calc,graphs,graphs.standard}
 \usepackage[nosf]{kpfonts}
 \usepackage[t1]{sourcesanspro}
-%\usepackage[lf]{MyriadPro}
-%\usepackage[lf,minionint]{MinionPro}
 \usepackage{multicol}
 \usepackage{wrapfig}
 \usepackage[top=0mm,bottom=1mm,left=0mm,right=1mm]{geometry}
@@ -14,21 +12,19 @@
 \usepackage{microtype}
 \usepackage{amsmath,mathtools}
 
-\let\bar\overline
+% \definecolor{myblue}{cmyk}{1,.72,0,.38}
 
-\definecolor{myblue}{cmyk}{1,.72,0,.38}
+% \def\firstcircle{(0,0) circle (1.5cm)}
+% \def\secondcircle{(0:2cm) circle (1.5cm)}
 
-\def\firstcircle{(0,0) circle (1.5cm)}
-\def\secondcircle{(0:2cm) circle (1.5cm)}
+% \colorlet{circle edge}{myblue}
+% \colorlet{circle area}{myblue!5}
 
-\colorlet{circle edge}{myblue}
-\colorlet{circle area}{myblue!5}
+% \tikzset{filled/.style={fill=circle area, draw=circle edge, thick},
+   %  outline/.style={draw=circle edge, thick}}
 
-\tikzset{filled/.style={fill=circle area, draw=circle edge, thick},
-    outline/.style={draw=circle edge, thick}}
-
-\pgfdeclarelayer{background}
-\pgfsetlayers{background,main}
+% \pgfdeclarelayer{background}
+% \pgfsetlayers{background,main}
 
 %\everymath\expandafter{\the\everymath \color{yellow}}
 %\everydisplay\expandafter{\the\everydisplay \color{myblue}}
@@ -36,17 +32,12 @@
 \renewcommand{\baselinestretch}{.8}
 \pagestyle{empty}
 
-\global\mdfdefinestyle{header}{%
-linecolor=gray,linewidth=1pt,%
-leftmargin=0mm,rightmargin=0mm,skipbelow=0mm,skipabove=0mm,
-}
+% \global\mdfdefinestyle{header}{%
+% linecolor=gray,linewidth=1pt,%
+% leftmargin=0mm,rightmargin=0mm,skipbelow=0mm,skipabove=0mm,
+% }
 
 \newcommand{\header}{
-\begin{mdframed}[style=header]
-\footnotesize
-\sffamily
-Math101 Formler af Benjamin St\o ttrup
-\end{mdframed}
 }
 
 \makeatletter
@@ -90,7 +81,7 @@ Math101 Formler af Benjamin St\o ttrup
 %%%%% START CHANGE
 \ifnum\count@=\numexpr\mult@rightbox+2\relax
           \setbox\count@\vsplit\@cclv to \dimexpr \dimen@-1cm\relax
-\setbox\count@\vbox to \dimen@{\vbox to 1cm{\header}\unvbox\count@\vss}%
+\setbox\count@\vbox to \dimen@{\vbox to 0cm{\header}\unvbox\count@\vss}%
 \else
       \setbox\count@\vsplit\@cclv to \dimen@
 \fi

@@ -10,10 +10,42 @@
 %%
 %% Document
 %%
+\title{Repetition af gymnasiematematik}
+\author{Kasper Studsgaard Sørensen, Benjamin Buus Støttrup}
 \begin{document}
+\pagestyle{plain}
+\maketitle
+\pagenumbering{roman}
+\tableofcontents
+\chapter*{Introduktion}\normalsize
+\addcontentsline{toc}{chapter}{Introduktion}
 %%
 %% Include Sections
 %%
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\chapter{Formelsamling}
+{ \newgeometry{top=5mm,bottom=5mm,left=5mm,right=5mm}
+    \fontsize{8pt}{0.5pt}\selectfont
+    \setlength{\abovedisplayskip}{1pt}
+    \setlength{\belowdisplayskip}{1pt}
+    \pagestyle{empty}
+    \setlength{\parindent}{0pt}
+    \small
+    \begin{multicols*}{3}
+        \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+        \input{formulas/section1.tex}
+        \input{formulas/section2.tex}
+        \input{formulas/section3.tex}
+        \input{formulas/section4.tex}
+        \input{formulas/section5.tex}
+        \input{formulas/section6.tex}
+        \input{formulas/section7.tex}
+    \end{multicols*}
+    }
+\restoregeometry
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
+\chapter{Basal matematik}
 \input{topics/Broker.tex}
 \input{exerc/exercises1.tex}
 
@@ -32,6 +64,7 @@
 \input{topics/MereOmLigninger.tex}
 \input{exerc/exercises6.tex}
 
+\chapter{Funktioner}
 \input{topics/Funktioner1.tex}
 \input{exerc/exercises7.tex}
 
@@ -50,6 +83,7 @@
 \input{topics/Graenserkontinuitet.tex}
 \input{exerc/exercises12.tex}
 
+\chapter{Differentiabilitet}
 \input{topics/Diff1.tex}
 \input{exerc/exercises13.tex}
 
@@ -65,6 +99,7 @@
 \input{topics/Optimering.tex}
 \input{exerc/exercises17.tex}
 
+\chapter{Integralregning}
 \input{topics/Ubestemtint1.tex}
 \input{exerc/exercises18.tex}
 
@@ -80,6 +115,7 @@
 \input{topics/Bestemtint2.tex}
 \input{exerc/exercises22.tex}
 
+\chapter{Differentialligninger}
 \input{topics/Diffeq1.tex}
 \input{exerc/exercises23.tex}
 
@@ -92,7 +128,7 @@
 \input{topics/Diffeq4.tex}
 \input{exerc/exercises26.tex}
 
-
+\chapter{Vektorer}
 \input{topics/Vec2d1.tex}
 \input{exerc/exercises27.tex}
 
@@ -104,10 +140,10 @@
 
 \input{topics/Vec3d2.tex}
 \input{exerc/exercises30.tex}
-
+\chapter{Repetition}
 \input{exerc/rep.tex}
 
-\section{Facit}
+\chapter{Facit}
 \input{answ/answers1.tex}
 \input{answ/answers2.tex}
 \input{answ/answers3.tex}
