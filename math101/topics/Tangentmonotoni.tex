@@ -1,0 +1,163 @@
+\section{Tangentligning og monotoniforhold}
+\noindent Vi vil nu se på nogle anvendelser af differentiation. Den første anvendelse er, hvordan man finder forskriften for den rette linje der går gennem et punkt på grafen for $f$, f.eks. $(x_0,f(x_0))$ med hældning $f'(x_0)$. Denne linje kaldes for tangenten til $f$ i punktet $(x_0,f(x_0)$.
+
+Vi husker, at forskriften for den rette linje er givet ved
+\begin{align}\label{eq:tangentmonotoniet}
+y=ax+b,
+\end{align}
+hvor $a$ er hældningen og $b$ er skæringspunktet med $y$-aksen. Vi har, at $a=f'(x_0)$ i forskriften for tangentens ligning da $f'(x_0)$ præcis beskriver hældningen. Det betyder at vi kun mangler at bestemme $b$, for at have en forskrift for tangentens ligning. Da vi ved, at tangenten går gennem punktet $(x_0,f(x_0))$ har vi, at
+\begin{align*}
+b=f(x_0) - f'(x_0)x_0.
+\end{align*}
+Hvis vi indsætter dette i \eqref{eq:tangentmonotoniet}, får vi at
+\begin{align*}
+y=f'(x_0)x + (f(x_0)-f'(x_0)x_0) = f'(x_0)(x-x_0)+f(x_0). 
+\end{align*}
+Denne ligning kaldes for tangents ligning til $f$ i punktet $(x_0,f(x_0))$.
+
+\paragraph*{Eksempler:}
+\begin{enumerate}
+\item Find tangentens ligning til $f(x)=x^2-4x+7$ i punktet $(1,4)$:
+
+Vi ser ud fra punktet, at $x_0=1$ og $f(x_0)=4$. For at finde $a=f'(x_0)$ finder vi først $f'(x)$, som er
+\begin{align*}
+f'(x)=\frac{d}{dx}(x^2-4x+7) = 2x-4.
+\end{align*}
+Det medfører, at 
+\begin{align*}
+f'(1)=2 \cdot 1 - 4 = -2.
+\end{align*}
+Til sidst finder vi $b$ ved
+\begin{align*}
+b=f(x_0)-f'(x_0)x_0 = 4-(-2)\cdot 1 = 4+2=6,
+\end{align*}
+så tangentens ligning til $f$ i punktet $(1,4)$ er
+\begin{align*}
+y=-2x+6.
+\end{align*}
+\end{enumerate}
+
+\paragraph*{Monotoniforhold:}
+Den næste anvendelse vi vil betragte er monotoniforhold. At finde monotoniforhold går ud på at finde ud af i hvilke intervaller en given funktion er voksende og hvor den er aftagende. Vi siger, at
+\begin{enumerate}
+\item En funktion er voksende i intervallet $[a,b]$, hvis $f'(x) \geq 0$ for alle $x \in [a,b]$.
+\item En funktion er aftagende i intervallet $[a,b]$, hvis $f'(x) \leq 0$ for alle $x \in [a,b]$.
+\end{enumerate}
+Hvis vi har en funktion $f$ som er differentiabel og hvor $f'$ er en kontinuert funktion, så gælder der, at $f$ kun kan skifte fra at være voksende (aftagende) til at være aftagende (voksende) i et punkt $x_0$, hvor $f'(x_0)=0$. Vi kalder sådanne punkter $x_0$ for kritiske punkter. Bemærk dog, at selvom selvom $f$ kan skifte fra at være voksende (aftagende) til at være aftagende (voksende) efter et kritisk punkt, så betyder det ikke at den nødvendigvis gør det. Hvis $x_0$ opfylder at $f'(x_0)=0$, men $f$ er voksende (aftagende) både før og efter $x_0$, så kaldes $x_0$ for et vendetangentspunkt.
+
+Hvis der findes et $x_0$ hvorom der gælder, at 
+\begin{align*}
+f(x) \leq f(x_0),
+\end{align*}
+for alle $x$ der både ligger i et lille interval omkring $x_0$ og i domænet for $f$, så kaldes $x_0$ for at lokalt maximum (se Figur~\ref{fig:tangentmonotoniet}). På tilsvarende vis, siger vi at $x_0$ er et lokalt minimum hvis der gælder, at
+\begin{align*}
+f(x) \geq f(x_0),
+\end{align*}
+for alle $x$ der både ligger i et lille interval omkring $x_0$ og i domænet for $f$ (se Figur~\ref{fig:tangentmonotonito}).
+\begin{figure}[!htbp]
+\begin{minipage}{0.49\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[xmin=-1.5,xmax=1.5,ymin=-1.2,ymax=1.5,ticks=none]
+	\addplot[thick, samples=100] {-x^2+x+0.5};
+
+	\draw[dashed] (axis cs:0.5,0) -- (axis cs:0.5,0.75);	
+	\node[below] at (axis cs:0.5,0){$x_0$};
+	\node[above left=3 pt] at (axis cs:1.5,0.5){$f(x)$};
+	\node at (axis cs:.7,0.7){$)$};
+	\node at (axis cs:.3,0.7){$($};
+	
+\end{axis}
+\end{tikzpicture}
+\caption{Lokalt maximum.}
+\label{fig:tangentmonotoniet}
+\end{minipage}
+\begin{minipage}{0.49\textwidth}
+ \centering
+\begin{tikzpicture}
+\begin{axis}[xmin=-1.5,xmax=1.5,ymin=-1.2,ymax=1.5,ticks=none]
+	\addplot[thick, samples=100] {x^2-x+0.5};
+
+	\draw[dashed] (axis cs:0.5,0) -- (axis cs:0.5,0.25);	
+	\node[below] at (axis cs:0.5,0){$x_0$};	
+	\node[above left=3 pt] at (axis cs:1.4,1.0){$f(x)$};
+	\node at (axis cs:.7,0.28){$)$};
+	\node at (axis cs:.3,0.28){$($};
+\end{axis}
+\end{tikzpicture}
+\caption{Lokalt minimum.}
+\label{fig:tangentmonotonito}
+\end{minipage}
+\end{figure}
+
+For at finde ud af i hvilke intervaller en funktion $f$ er voksende og aftagende, finder vi først ud af i hvilke punkter $f'(x)=0$. Dernæst finder vi ud af hvilket fortegn $f'(x)$ har i punkter henholdsvis før, efter og imellem disse kritiske punkter, da $f'$ kun kan skifte fortegn efter et kritisk punkt. Disse værdier kan man så indsætte i en monotonilinje (se Tabel~\ref{tab:tangentmonotoniet}). Hvis $f'(x)$ er negativ så vil man i $f$'s indgang i monotonilinjen lave en nedadgående pil, for at vise at $f$ er aftagende og modsat, hvis $f'(x)$ er positiv vil man lave en opadgående pil (se det følgende eksempel).
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{l !{\qquad} {c}!{\qquad} {c}!{\qquad} {c}!{\qquad} {c} !{\qquad} {c}}
+$x$      & $x_1$  &	 $x_2$ & $x_3$	& $x_4$ & $x_5$	\\ \toprule
+$f'(x)$	 &  					\\ \midrule
+$f(x)$ 	 & 	\\ \bottomrule  
+\end{tabular}
+\caption{Monotonilinje.}\label{tab:tangentmonotoniet}
+\end{table}
+Til sidst kan man så ud fra monotonilinjen konkludere i hvilke intervaller funktionen er aftagende og voksende.
+
+\paragraph*{Eksempler:}
+\begin{enumerate}
+\item Bestem monotoniforhold for funktionen $f(x)=-x^3 - 3x^2+2$:
+
+Vi finder først $f'(x)$ ved at differentiere
+\begin{align*}
+f'(x)=(-x^3-3x^2+2)' = -3x^2-6x.
+\end{align*}
+Dernæst løser vi $f'(x)=0$ og ser at
+\begin{align*}
+f'(x)=0 &\Leftrightarrow -3x^2-6x=0, \\
+& \Leftrightarrow -3x(x+2)=0.
+\end{align*}
+Ved at benytte nulreglen får vi, at de kritiske punkter er $x=-2$ og $x=0$. Dermed ser vores monotonilinje indtil videre ud som 
+\begin{table}[h!]
+\centering
+\begin{tabular}{l !{\qquad} {c}!{\qquad} {c}!{\qquad} {c}!{\qquad} {c} !{\qquad} {c}}
+$x$      & $x_1$  &	 $-2$ & $x_2$	& $0$ & $x_3$	\\ \toprule
+$f'(x)$	 &  	  &	$0$	& & $0$ &			\\ \midrule
+$f(x)$ 	 & 	 & & & &\\ \bottomrule  
+\end{tabular}
+\caption{Monotonilinje for $f(x)=-x^3-3x^2+2$.}
+\end{table}
+
+Vi vælger nu punkter $x_1,x_2,x_3$ hvor $x_1$ er mindre end $-2$, $x_2$ ligger mellem $-2$ og $0$ og $x_3$ er større end $0$, f.eks. $x_1=-3$, $x_2=-1$ og $x_3=1$. Vi indsætter nu disse punkter i forskriften for $f'$ og får
+\begin{align*}
+f'(-3)&=-3 \cdot (-3)^2 - 6 \cdot (-3) = -27 + 18=-9,\\
+f'(-1)&=-3 \cdot (-1)^2 - 6 \cdot (-1) = -3 + 6 = 3, \\
+f'(1) &=-3 \cdot 1^2 - 6 \cdot 1 = -3 -6 = -9.
+\end{align*}
+Hvis vi indsætter disse oplysninger i vores monotonolinje, får vi
+\begin{table}[h!]
+\centering
+\begin{tabular}{l !{\qquad} {c}!{\qquad} {c}!{\qquad} {c}!{\qquad} {c} !{\qquad} {c}}
+$x$      & $-3$  &	 $-2$ & $-1$	& $0$ & $1$	\\ \toprule
+$f'(x)$	 &  $-9$	  &	$0$	& $3$ & $0$ & $-9$			\\ \midrule
+$f(x)$ 	 & 	$\searrow$ & & $\nearrow$ & & $\searrow$ \\ \bottomrule  
+\end{tabular}
+\caption{Monotonilinje for $f(x)=-x^3-3x^2+2$.}
+\end{table}
+
+Det giver at
+\begin{enumerate}
+\item $f$ er aftagende i intervallet $(-\infty,-2]$,
+\item $f$ er voksende i intervallet $[-2,0]$,
+\item $f$ er aftagende i intervallet $[0,\infty)$,
+\end{enumerate}
+og at $x=-2$ er et lokalt minimum og $x=0$ er et lokalt maximum.
+\end{enumerate}
+
+
+
+
+
+
+
+
+

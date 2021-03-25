@@ -43,13 +43,13 @@ Den næste anvendelse vi vil betragte er monotoniforhold. At finde monotoniforho
 \item En funktion er voksende i intervallet $[a,b]$, hvis $f'(x) \geq 0$ for alle $x \in [a,b]$.
 \item En funktion er aftagende i intervallet $[a,b]$, hvis $f'(x) \leq 0$ for alle $x \in [a,b]$.
 \end{enumerate}
-Hvis vi har en funktion $f$ som er differentiabel og hvor $f'$ er en kontinuert funktion, så gælder der, at $f$ kun kan skifte fra at være voksende (aftagende) til at være aftagende (voksende) i et punkt $x_0$, hvor $f'(x_0)=0$. Vi kalder sådanne punkter $x_0$ for kritiske punkter. Bemærk dog, at selvom selvom $f$ kan skifte fra at være voksende (aftagende) til at være aftagende (voksende) efter et kritisk punkt, så betyder det ikke at den nødvendigvis gør det. Hvis $x_0$ opfylder at $f'(x_0)=0$, men $f$ er voksende (aftagende) både før og efter $x_0$, så kaldes $x_0$ for et vendetangentspunkt.
+Hvis vi har en funktion $f$ som er differentiabel og hvor $f'$ er en kontinuert funktion, så gælder der, at $f$ kun kan skifte fra at være voksende (aftagende) til at være aftagende (voksende) i et punkt $x_0$, hvor $f'(x_0)=0$. Vi kalder sådanne punkter $x_0$ for kritiske punkter. Bemærk dog, at selvom $f$ kan skifte fra at være voksende (aftagende) til at være aftagende (voksende) efter et kritisk punkt, så betyder det ikke at den nødvendigvis gør det. Hvis $x_0$ opfylder at $f'(x_0)=0$, men $f$ er voksende (aftagende) både før og efter $x_0$, så kaldes $x_0$ for et vendetangentspunkt.
 
 Hvis der findes et $x_0$ hvorom der gælder, at 
 \begin{align*}
 f(x) \leq f(x_0),
 \end{align*}
-for alle $x$ der både ligger i et lille interval omkring $x_0$ og i domænet for $f$, så kaldes $x_0$ for at lokalt maximum (se Figur~\ref{fig:tangentmonotoniet}). På tilsvarende vis, siger vi at $x_0$ er et lokalt minimum hvis der gælder, at
+for alle $x$ der både ligger i et lille interval omkring $x_0$ og i domænet for $f$, så kaldes $x_0$ for at lokalt maksimum (se Figur~\ref{fig:tangentmonotoniet}). På tilsvarende vis, siger vi at $x_0$ er et lokalt minimum hvis der gælder, at
 \begin{align*}
 f(x) \geq f(x_0),
 \end{align*}
@@ -69,7 +69,7 @@ for alle $x$ der både ligger i et lille interval omkring $x_0$ og i domænet fo
 	
 \end{axis}
 \end{tikzpicture}
-\caption{Lokalt maximum.}
+\caption{Lokalt maksimum.}
 \label{fig:tangentmonotoniet}
 \end{minipage}
 \begin{minipage}{0.49\textwidth}
@@ -133,7 +133,7 @@ f'(-3)&=-3 \cdot (-3)^2 - 6 \cdot (-3) = -27 + 18=-9,\\
 f'(-1)&=-3 \cdot (-1)^2 - 6 \cdot (-1) = -3 + 6 = 3, \\
 f'(1) &=-3 \cdot 1^2 - 6 \cdot 1 = -3 -6 = -9.
 \end{align*}
-Hvis vi indsætter disse oplysninger i vores monotonolinje, får vi
+Hvis vi indsætter disse oplysninger i vores monotonilinje, får vi
 \begin{table}[h!]
 \centering
 \begin{tabular}{l !{\qquad} {c}!{\qquad} {c}!{\qquad} {c}!{\qquad} {c} !{\qquad} {c}}
@@ -150,7 +150,7 @@ Det giver at
 \item $f$ er voksende i intervallet $[-2,0]$,
 \item $f$ er aftagende i intervallet $[0,\infty)$,
 \end{enumerate}
-og at $x=-2$ er et lokalt minimum og $x=0$ er et lokalt maximum.
+og at $x=-2$ er et lokalt minimum og $x=0$ er et lokalt maksimum.
 \end{enumerate}
 
 

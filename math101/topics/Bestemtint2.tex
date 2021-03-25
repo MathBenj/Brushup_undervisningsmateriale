@@ -1,0 +1,107 @@
+\section{Delvis integration og substitution for bestemte integraler}
+\noindent Vi har tidligere betragtet delvis integration og integration ved substitution for ubestemte integraler. Vi vil nu indføre disse tekniker for bestemte integraler.
+
+\paragraph*{Regneregel:}
+Hvis $f$ er en differentiabel funktion og $g$ er en kontinuert funktion, så er det bestemte integral af deres produkt i intervallet $[a,b]$ givet ved
+\begin{enumerate}
+\item $\displaystyle \int_a^b f(x)g(x) \d x = [f(x)G(x)]_a^b - \int_a^b f'(x)G(x) \d x$.
+\end{enumerate}
+Husk, at det ofte er en fordel, hvis man tænker sig lidt om, før man vælger, hvilken funktion man tager som $f$ og hvilken man tager som $g$. 
+\paragraph*{Eksempler:}
+\begin{enumerate}
+\item Bestem integralet af funktionen $h(x)=x \sin x$ i intervallet $[0,\frac{\pi}{2}]$:
+
+Hvis vi vælger $f(x)=x$ og $g(x)=\sin x$, så har vi at $f'(x)=1$ og $G(x)=-\cos x$. Indsætter vi dette i regneregel $1$. får vi
+\begin{align*}
+\int_0^\frac{\pi}{2} x \sin x \d x &= [x  (- \cos x)]_0^\frac{\pi}{2}-\int_0^\frac{\pi}{2} 1 (-\cos x ) \d x \\
+&= [x  (- \cos x)]_0^\frac{\pi}{2}+\int_0^\frac{\pi}{2} \cos x  \d x \\
+&=[-x\cos x]_0^\frac{\pi}{2}  + [\sin x]_0^\frac{\pi}{2} \\
+&=- \frac{\pi}{2} \cos \frac{\pi}{2} - \Big( -0 \cdot \cos 0 \Big) + \sin \frac{\pi}{2} - \sin 0 \\
+&= - \frac{\pi}{2} \cdot 0 - 0 + 1 - 0 \\
+&= 1.
+\end{align*}
+\end{enumerate}
+
+\paragraph*{Integration ved substitution:}
+Integration ved substitution for bestemte integraler minder meget om integration ved substitution for ubestemte integraler. Den eneste forskel er, at når vi substituerer den indre funktion skal vi huske at ændre grænserne tilsvarende.
+
+Hvis vi har en funktion $h$ som er givet som et produkt af to funktioner på formen
+\begin{align*}
+h(x) = f(g(x))g'(x),
+\end{align*}
+så er det bestemte integral i intervallet $[a,b]$ af $h$ givet ved
+\begin{align}\label{eq:bestemtint2et}
+\int_a^b h(x) \d x = \int_a^b f(g(x))g'(x) \d x.
+\end{align}
+Hvis vi nu substituerer $u=g(x)$ og differentierer i forhold til $x$, får vi
+\begin{align*}
+\frac{du}{dx}=g'(x) \Leftrightarrow \frac{1}{g'(x)} du = dx.
+\end{align*}
+Vi indsætter nu dette i \eqref{eq:bestemtint2et}, hvilket giver
+\begin{align*}
+\int_a^b h(x) \d x = \int_a^b f(g(x))g'(x) \d x = \int_{g(a)}^{g(b)} f(u) g'(x) \frac{1}{g'(x)}\d u = \int_{g(a)}^{g(b)} f(u) \d u.
+\end{align*}
+Bemærk, at når vi substituere er vi nød til at ændre vores grænser.
+Vi kan nu integrere $f$ i forhold til $u$ og dernæst substituere tilbage igen
+\begin{align*}
+\int_a^b h(x) \d x = \int_{g(a)}^{g(b)} f(u) \d u = [F(u)]^{g(b)}_{g(a)} = F(g(b))-F(g(a)).
+\end{align*}
+En anden måde at bestemme det bestemte integral af $h$ er ved først at finde stamfunktionen til $h$ og dernæst bruge at
+\begin{align*}
+\int_a^b h(x) \d x = H(b) - H(a).
+\end{align*}
+Vi finder nu stamfunktionen til $h$ ved substitution
+\begin{align*}
+H(x) &= \int h(x) \d x \\
+&= \int f(g(x))g'(x) \d x \\
+&= \int f(u) g'(x) \frac{1}{g'(x)} \d u \\
+&= \int f(u) \d u \\
+&= F(u) +c \\
+&= F(g(x))+c. 
+\end{align*}
+Dermed har vi, at det bestemte integral af $h$ i intervallet $[a,b]$ er givet ved
+\begin{align*}
+\int_a^b h(x) \d x = H(b)-H(a) = F(g(b))-F(g(a)).
+\end{align*}
+
+\paragraph*{Eksempler:}
+\begin{enumerate}
+\item Udregn det bestemte integral i intervallet $[0,2]$ af funktionen $h(x)=5x^4e^{x^5}$:
+
+Vi udregner det bestemte integrale
+\begin{align}\label{eq:bestemtint2to}
+\int_0^2 h(x) \d x = \int_0^2 5x^4e^{x^5} \d x,
+\end{align}
+ved at bruge de to ovenstående metoder. Vi lader $f(x)=e^x$ og $g(x)=x^5$, så har vi at $h(x)=f(g(x))g'(x)$.
+
+Hvis vi nu sætter $u=g(x)=x^5$ og differentierer i forhold til $x$ får vi
+\begin{align*}
+\frac{du}{dx}=5x^4 \Leftrightarrow \frac{1}{5x^4} d u = dx.
+\end{align*}
+Vi indsætter nu dette i~\eqref{eq:bestemtint2to}, hvilket giver
+\begin{align*}
+\int_0^2 h(x) \d x = \int_0^2 5x^4e^{x^5} \d x = \int_{g(0)}^{g(2)} 5x^4 e^u \frac{1}{5x^4} \d u = \int_{0^5}^{2^5} e^u \d u = \int_0^{32} e^u \d u.
+\end{align*}
+Ved at integrere og substituere tilbage får vi nu
+\begin{align*}
+\int_0^2 h(x) \d x = \int_0^{32} e^u \d u. = [e^u]_0^{32} = e^{32}-1.
+\end{align*}
+I den anden metode, finder vi først stamfunktionen til $h$
+\begin{align*}
+H(x)=\int h(x) \d x = \int 5 x^4e^{x^5} = \int 5x^4 e^u \frac{1}{5x^4} \d u = \int e^u \d u = e^u = e^{x^5}
+\end{align*}
+og dernæst finder vi det bestemte integral udfra
+\begin{align*}
+\int_0^2 h(x) \d x = H(b) - H(a) = e^{2^5}-e^{0^5} = e^{32} - 1.
+\end{align*}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+

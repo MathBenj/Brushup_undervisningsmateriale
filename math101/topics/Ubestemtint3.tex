@@ -1,0 +1,93 @@
+\section{Integration ved substitution for ubestemte integraler}
+\noindent Sidste gang studerede vi, hvordan man kan finde stamfunktionen til et produkt af funktioner. Hvis dette produkt er på formen 
+\begin{align}\label{eq:ubestemtint3et}
+h(x)=f(g(x))g'(x),
+\end{align}
+så kan vi bruge en anden metode til at finde stamfunktionen. Denne metode kaldes integration ved substitution. Idéen med integration ved substitution er, at substituere den indre funktion i den sammensatte funktion ud, så vi ikke længere har en sammensat funktion. Derfor sætter vi $u=g(x)$ og hvis vi differentierer denne funktion får vi 
+\begin{align*}
+\frac{du}{dx}=g'(x).
+\end{align*}
+Hvis vi nu betragter venstresiden som en brøk og isolerer $dx$, får vi
+\begin{align*}
+dx = \frac{1}{g'(x)}du.
+\end{align*}
+Indsætter vi dette i stamfunktionen for $h$, får vi
+\begin{align*}
+H(x) = \int g'(x)f(g(x)) \d x = \int g'(x) f(u) \frac{1}{g'(x)} \d u = \int f(u) \d u = F(u) + c,
+\end{align*}
+hvor $F$ er stamfunktionen til $f$. Nu kan vi så substituere $u = g(x)$ tilbage, hvilket giver at stamfunktionerne til $h$ er 
+\begin{align*}
+H(x) = F(g(x)) + c.
+\end{align*}
+Integration ved substitution er tit nemmere at forstå ved hjælp af eksempler.
+
+\paragraph*{Eksempler:}
+\begin{enumerate}
+\item Find stamfunktionerne til $h(x)=5x^4e^{x^5}$:
+
+Vi følger samme strategi som ovenfor. Hvis vi lader $f(x)=e^x$ og $g(x)=x^5$, så har vi at
+\begin{align*}
+h(x) = g'(x) f(g(x))
+\end{align*}
+og vi vil gerne bestemme stamfunktionerne til $h$, som er
+\begin{align*}
+H(x)= \int 5x^4 e^{x^5} \d x +c.
+\end{align*}
+Vi sætter nu $u = g(x) = x^5$, differentierer og isolerer $dx$ og får
+\begin{align*}
+\frac{du}{dx} = 5x^4 \Leftrightarrow dx = \frac{1}{5x^4}du.
+\end{align*}
+Hvis vi indsætter dette i integralet for stamfunktionen får vi at
+\begin{align*}
+H(x) = \int 5x^4 e^u \frac{1}{5x^4} \d u   = \int e^u \d u  = e^u .
+\end{align*}
+Substituerer vi nu $u=x^5$ tilbage får vi
+\begin{align*}
+H(x) = e^{x^5} + c.
+\end{align*}
+\item Find stamfunktionerne til $h(x)=x\sin(x^2)$:
+
+Hvis vi lader $f(x)=\sin x$ og $g(x)=x^2$, så har vi at
+\begin{align*}
+h(x) = x \sin (x^2) = 2\frac{1}{2}x \sin (x^2) = \frac{1}{2} g'(x)f(g(x))
+\end{align*}
+og vi vil gerne bestemme stamfunktionen til $h$, som er
+\begin{align*}
+H(x)= \int x\sin (x^2) \d x .
+\end{align*}
+Vi sætter nu $u = g(x) = x^2$, differentierer og isolerer $dx$ og får
+\begin{align*}
+\frac{du}{dx} = 2x \Leftrightarrow dx = \frac{1}{2x}du.
+\end{align*}
+Hvis vi indsætter dette i integralet for stamfunktionerne får vi at
+\begin{align*}
+H(x) = \int  x \sin (u) \frac{1}{2x} \d u  = \frac{1}{2}\int \sin u \d u  = -\frac{1}{2}\cos u  +c.
+\end{align*}
+Substituerer vi nu $u=x^2$ tilbage får vi
+\begin{align*}
+H(x) = -\frac{1}{2}\cos (x^2) + c.
+\end{align*}
+\item Find stamfunktionerne til $h(x)=4x^7\cos x^4$:
+
+Vi har indtil videre kun betragtet integration ved substitution af funktioner på formen $h(x)=g'(x)f(g(x))$, men i visse tilfælde er det muligt at benytte integration ved substitution selv for funktioner der ikke er på den form. Vi kan dog ikke garantere at integration ved substitution giver noget nyttigt så. Derfor må man nogle gange prøve sig frem, og se om man får noget nyttigt ud af det.
+
+Hvis vi prøver at substituere $u=x^4$, så får vi
+\begin{align*}
+\frac{du}{dx} = 4x^3 \Leftrightarrow \frac{1}{4x^3}du = dx.
+\end{align*} 
+Indsætter vi dette i stamfunktionen for $h$, får vi
+\begin{align*}
+H(x)=\int 4x^7 \cos (u) \frac{1}{4x^3}\d u = \int x^4 \cos u \d x = \int u \cos u \d u.
+\end{align*}
+Vi ser at vi stadig har et produkt af to funktioner, men det kan vi nu integrere ved brug af delvis integration. Vi sætter $f(u)=u$ og $g(u)=\cos u$, hvilket giver at $f'(u)=1$ og $G(u)=\sin u$. Dermed får vi at
+\begin{align*}
+\int u \cos u \d u = u\sin u - \int \sin u \d u = u\sin u + \cos u + c.
+\end{align*}
+Substituere vi nu $u=x^4$ tilbage igen får vi
+\begin{align*}
+H(x) = \int 4x^7\cos x^4 \d x = x^4 \sin (x^4) + \cos (x^4) + c.
+\end{align*}
+\end{enumerate}
+
+
+
