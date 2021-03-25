@@ -1,0 +1,122 @@
+%%%
+%%% Master document
+%%% For Brush-up kursusmateriale
+%%%
+%%
+%% Include preamble and marcos
+%%
+\input{preamble/preamble.tex}
+\input{preamble/macros.tex}
+%%
+%% Document
+%%
+
+
+\author{Benjamin Buus Støttrup}
+\begin{document}
+\pagestyle{plain}
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        \Huge
+        \textbf{Opgaver og facit til Math101}
+
+        \vspace{0.5cm}
+        \large
+        Udarbejdet til Math101 kurset på Aalborg Universitet i 2018.
+        \vspace{1.5cm}
+
+        af
+
+        \vspace{1.5cm}
+        \textbf{Benjamin Buus Støttrup}
+
+        \vfill
+        Senest opdateret \today
+        \vspace{2cm}
+
+
+
+
+    \end{center}
+    \doclicenseThis
+ \end{titlepage}
+
+
+
+\pagenumbering{roman}
+\tableofcontents
+\chapter*{Introduktion}\normalsize
+Dette dokument indeholder en formelsamling, opgaver og facit til anvendelse i kurset Math101. Math101 er et genopfriskningskursus der typisk afholdes i efterårssemestret for de førsteårsstuderende der i løbet af semestret har fundet ud af at deres matematikniveau kunne trænge til løft. Formålet med Math101 er at give deltagerene en genopfriskning af de matematiske regnefærdigheder, primært ved at de skal løse et stort antal opgaver. Math101 kurset blev revideret i 2018 i forbindelse med at Brush-up kurserne også fik en større revidering. Math101 er tiltænkt et tilbud til de studerende der ikke benyttede sig af Brush-up, men som alligevel har brug for mere matisk rutine. Indholdet i Math101 er derfor en kraftigt reduceret version af Brush-up. Selvom emnerne går igen er opgaverne forskellige.
+
+Math 101 består af 9 korte lektioner omhandlende følgende emner 
+\begin{enumerate}
+    \item Brøker, Potenser, Rødder, Kvadratsætninger.
+    \item Første- og andengradsligninger.
+    \item Introduktion til funktioner, herunder første-og andengradspolynomier.
+    \item Inverse funktioner, Logaritme- og eksponentialfunktioner samt trigonometriske funktioner.
+    \item Introduktion til differentialregning.
+    \item Produktregelen, kvotientregelen og kædereglen.
+    \item Bestemte og ubestemte integraler.
+    \item Delvis integration og integration ved substitution.
+\end{enumerate}
+En lektion består typisk af en kort gennemgang af lektionens emne ud fra slides samt regning af opgaver. Alle andre opgaver bør løses uden brug af lommeregner o.l.\ elektroniske hjælpemidler. \emph{Har man ikke tænkt sig at regne i hånden kan man lige så godt lade være med at regne opgaverne!}. Bagerst i dette dokument findes en liste med svar til opgaverne. Nogle af svarene er med uddybende forklaringer, og det er ikke alle spørgsmål som kun har en løsning.
+
+
+\addcontentsline{toc}{chapter}{Introduktion}
+%%
+%% Include Sections
+%%
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\chapter{Formelsamling}
+Nedenfor findes en formelsamling der dækker de emner der gennemgås i dette dokument. Formålet med formelsamlingen er at gøre det nemmere for læseren at løse opgaverne uden at skulle bladre alt for meget i dokumentet. Formelsamlingen er meget kompakt, og er derfor også velegnet til at printe og medbringe til skriftlige eksamener o.l.\ hvor det er godt at have et kompakt opslagsværk over de mest almindelige formler.
+{ \newgeometry{top=5mm,bottom=5mm,left=5mm,right=5mm}
+    \fontsize{8pt}{0.5pt}\selectfont
+    \setlength{\abovedisplayskip}{1pt}
+    \setlength{\belowdisplayskip}{1pt}
+    \pagestyle{empty}
+    \setlength{\parindent}{0pt}
+    \small
+    \begin{multicols*}{3}
+        \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+        \input{formulas/section1.tex}
+        \input{formulas/section2.tex}
+        \input{formulas/section3.tex}
+        \input{formulas/section4.tex}
+        \input{formulas/section5.tex}
+        % \input{formulas/section6.tex}
+        % \input{formulas/section7.tex}
+        \phantom{asdfjæasdjfæsalkdjfælsadjfælksadjfælksadjfælkadsjfælksadjfælsakdjfælsakdjfælsakdjfælksadjfælakdsjfældsakjfæl}
+        \vfill
+    \end{multicols*}
+    }
+\restoregeometry
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
+\chapter{Opgaver}
+\input{exerc/exercises1.tex}
+\input{exerc/exercises2.tex}
+\input{exerc/exercises3.tex}
+\input{exerc/exercises4.tex}
+\input{exerc/exercises5.tex}
+\input{exerc/exercises6.tex}
+
+\input{exerc/exercises7.tex}
+
+\input{exerc/exercises8.tex}
+
+\chapter{Repetition}\label{ch:rep}
+Dette afsnit indeholder repetitionsopgaver som dækker de fleste af de emner der er gennemgået i disse noter. Hvis man kan løse disse opgaver uden de store problemer, så har man et fornuftigt udgangspunkt til at komme helskindet igennem diverse matematikkurser på Aalborg Universitet.
+\input{exerc/rep.tex}
+
+\chapter{Facit}
+\input{answ/answers1.tex}
+\input{answ/answers2.tex}
+\input{answ/answers3.tex}
+\input{answ/answers4.tex}
+\input{answ/answers5.tex}
+\input{answ/answers6.tex}
+\input{answ/answers7.tex}
+\input{answ/answers8.tex}
+\input{answ/rep.tex}
+\end{document}

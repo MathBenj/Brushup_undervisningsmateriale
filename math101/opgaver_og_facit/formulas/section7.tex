@@ -1,0 +1,61 @@
+\mysection{Vektorer i planen}
+En vektor $\vec{u}$ i planen skrives som $\vec{u}=[x,y]$ hvor $x,y\in \R$.
+\mysubsection{Regneregler}
+For $\vec{u}=[x_1,y_1]$, $\vec{v}=[x_2,y_2]$, $c\in \R$ er 
+\begin{align*}
+    \vec{u}\pm\vec{v}=\begin{bmatrix}
+        x_1\pm x_2\\y_1\pm y_2
+    \end{bmatrix}, &&\vec{u}\cdot\vec{v}=x_1x_2+y_1y_2 ,\\
+    c\vec{u}=\begin{bmatrix*}
+        cx_1\\cy_1
+    \end{bmatrix*}, && \!\!\!\det(\vec{u},\vec{v})=x_1y_2-x_2y_1
+\end{align*}
+Længden af $\vec{u}$ er $\left\Vert \vec{u}\right\Vert=\sqrt{x_1^2+y_1^2}$.
+\mysubsection{Vinklen mellem to vektorer}
+For vinklen $\theta$ mellem $\vec{u}$, $\vec{v}$ er 
+\begin{align*}
+    \cos\theta=\frac{\vec{u}\cdot\vec{v}}{\left\Vert \vec{u}\right\Vert \left\Vert \vec{v}\right\Vert }, && \sin\theta=\frac{\det(\vec{u},\vec{v})}{\left\Vert \vec{u}\right\Vert \left\Vert \vec{v}\right\Vert}
+\end{align*}
+Yderligere gælder 
+\begin{enumerate}
+    \item $\vec{u}$ og $\vec{v}$ er ortogonale $\Leftrightarrow $ $\vec{u}\cdot\vec{v}=0$.
+    \item $\vec{u}$ og $\vec{v}$ er parallelle $\Leftrightarrow$ $\det(\vec{u},\vec{v})=0$.
+\end{enumerate}
+\
+\mysection{Vektorer i rummet}
+En vektor $\vec{u}$ i rummet skrives som $\vec{u}=[x,y,z]$ hvor $x,y,z\in \R$.
+\mysubsection{Regneregler}
+For $\vec{u}=[x_1,y_1,z_1]$, $\vec{v}=[x_2,y_2,z_2]$ og $c\in \R$ gælder 
+\begin{align*}
+    &\vec{u}\pm\vec{v}=\begin{bmatrix}
+        x_1\pm x_2\\y_1\pm y_2\\z_1\pm z_2
+    \end{bmatrix}, && c\vec{u}=\begin{bmatrix*}
+        cx_1\\cy_1\\c z_1
+    \end{bmatrix*},\\
+    &\vec{u}\cdot\vec{v}=x_1x_2+y_1y_2+z_1z_2. &&
+\end{align*}
+Længden af $\vec{u}$ er $\left\Vert \vec{u}\right\Vert=\sqrt{x_1^2+y_1^2+z_1^2}$. Krydsproduktet er givet ved 
+\begin{equation*}
+    \vec{u}\times \vec{v}=\begin{bmatrix}
+        y_1z_2-z_1y_2\\ z_1x_2-x_1z_2\\x_1y_2-y_1x_2
+    \end{bmatrix}
+\end{equation*}
+\mysubsection{Vinklen mellem to vektorer}
+For vinklen $\theta$ mellem $\vec{u}$ og $\vec{v}$ gælder 
+\begin{align*}
+    \cos\theta=\frac{\vec{u}\cdot\vec{v}}{\left\Vert \vec{u}\right\Vert \left\Vert \vec{v}\right\Vert }, && \sin\theta=\frac{\left\Vert \vec{u}\times \vec{v}\right\Vert }{\left\Vert \vec{u}\right\Vert \left\Vert \vec{v}\right\Vert}
+\end{align*}
+Yderligere gælder 
+\begin{enumerate}
+    \item $\vec{u}$ og $\vec{v}$ er ortogonale $\Leftrightarrow$ $\vec{u}\cdot\vec{v}=0$.
+    \item $\vec{u}$ og $\vec{v}$ er parallelle $\Leftrightarrow$ $\vec{u}\times\vec{v}=0$.
+\end{enumerate}
+\mysection{Linjer og Planer}
+Planen/linjen gennem punktet med stedvektor $\vec{x}_0$ med normalvektor $\vec{n}$ beskrives ved alle vektorer $\vec{x}$ der løser ligningen
+\begin{equation*}
+    \vec{n}\cdot(\vec{x}-\vec{x_0})=0
+\end{equation*}
+En linje i rummet/planen gennem punktet med stedvektor $\vec{x}_0$ og retning $\vec{r}$ har parameterfremstilling
+\begin{align*}
+    \vec{x}_0+t\vec{r}, \quad t\in \R.
+\end{align*}
